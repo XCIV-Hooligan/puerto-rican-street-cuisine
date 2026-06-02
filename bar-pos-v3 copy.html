@@ -266,48 +266,6 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:8
 #menuPage{flex-direction:column;padding:16px;overflow-y:auto;}
 
 /* SETTINGS PAGE */
-#deliveryPage,#kitchenPage{flex-direction:column;padding:16px;overflow-y:auto;}
-
-/* KDS */
-.kds-ticket{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:8px;}
-.kds-ticket.kds-new{border-color:var(--accent);}
-.kds-ticket.kds-fired{border-color:var(--orange,#f59e0b);}
-.kds-ticket.kds-done{border-color:var(--green);opacity:.7;}
-.kds-ticket-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.kds-ticket-num{font-size:.72rem;font-weight:800;letter-spacing:.5px;color:var(--text2);font-family:monospace;}
-.kds-tab-name{font-size:1rem;font-weight:800;flex:1;}
-.kds-age{font-size:.78rem;font-family:monospace;font-weight:700;padding:2px 7px;border-radius:20px;}
-.kds-age.fresh{background:rgba(34,197,94,.15);color:var(--green);}
-.kds-age.warm{background:rgba(245,158,11,.18);color:var(--orange,#f59e0b);}
-.kds-age.hot{background:rgba(239,68,68,.18);color:var(--red,#ef4444);animation:kds-pulse .9s ease-in-out infinite;}
-@keyframes kds-pulse{0%,100%{opacity:1;}50%{opacity:.55;}}
-.kds-item-row{display:flex;align-items:flex-start;gap:6px;font-size:.85rem;padding:4px 0;border-bottom:1px solid var(--border);}
-.kds-item-row:last-child{border-bottom:none;}
-.kds-item-qty{font-weight:800;min-width:22px;color:var(--accent);}
-.kds-item-name{flex:1;font-weight:600;}
-.kds-item-mods{font-size:.73rem;color:var(--text2);display:block;margin-top:1px;}
-.kds-item-note{font-size:.73rem;color:var(--orange,#f59e0b);font-style:italic;display:block;margin-top:1px;}
-.kds-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;}
-.kds-filter.active{background:var(--accent);color:#fff;}
-.kds-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 14px;font-size:.8rem;font-weight:700;display:flex;align-items:center;gap:6px;}
-
-/* DELIVERY */
-.dlv-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;}
-.dlv-card.pending{border-left:4px solid var(--orange,#f59e0b);}
-.dlv-card.accepted{border-left:4px solid var(--green);}
-.dlv-card.ready{border-left:4px solid var(--purple);}
-.dlv-card.completed{border-left:4px solid var(--text2);opacity:.75;}
-.dlv-card.rejected{border-left:4px solid var(--red,#ef4444);opacity:.65;}
-.dlv-platform-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;margin-right:6px;}
-.dlv-platform-doordash{background:#e03e2d;color:#fff;}
-.dlv-platform-ubereats{background:#06C167;color:#fff;}
-.dlv-platform-instacart{background:#43B02A;color:#fff;}
-.dlv-platform-grubhub{background:#f63440;color:#fff;}
-.dlv-platform-other{background:var(--surface2);color:var(--text2);}
-.dlv-filter.active{background:var(--accent);color:#fff;}
-.dlv-stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center;}
-.dlv-stat-card .dlv-stat-val{font-size:1.5rem;font-weight:800;color:var(--accent);}
-.dlv-stat-card .dlv-stat-lbl{font-size:.72rem;color:var(--text2);margin-top:2px;}
 #settingsPage{flex-direction:column;padding:16px;overflow-y:auto;max-width:600px;}
 
 /* MODALS */
@@ -645,57 +603,6 @@ input:checked+.toggle-track::after{left:23px;}
 @keyframes cd-pop{0%{transform:scale(.7);opacity:0;}100%{transform:scale(1);opacity:1;}}
 .cd-footer{width:100%;text-align:center;padding-top:20px;border-top:1px solid var(--border);}
 .cd-footer-msg{font-size:1rem;color:var(--text2);}
-/* ===== CUSTOMER CRM ===== */
-.cust-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .15s;}
-.cust-card:hover{border-color:var(--accent);}
-.cust-avatar{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;flex-shrink:0;}
-.cust-info{flex:1;min-width:0;}
-.cust-name{font-weight:700;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.cust-sub{font-size:.78rem;color:var(--text2);margin-top:2px;}
-.cust-pts{font-size:.82rem;font-weight:700;color:var(--accent);margin-left:auto;white-space:nowrap;}
-.loyalty-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:20px;padding:2px 10px;font-size:.72rem;font-weight:700;}
-/* ===== TIME CLOCK ===== */
-.tc-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
-.tc-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.75rem;font-weight:700;}
-.tc-badge.in{background:var(--green);color:#fff;}
-.tc-badge.out{background:var(--border);color:var(--text2);}
-.tc-emp-name{font-weight:600;flex:1;}
-.tc-time{font-size:.82rem;color:var(--text2);font-family:monospace;}
-/* ===== GIFT CARDS ===== */
-.gc-card{background:linear-gradient(135deg,var(--accent),var(--purple,#7c3aed));border-radius:12px;padding:16px 20px;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.25);}
-.gc-card .gc-num{font-size:1.1rem;font-family:monospace;letter-spacing:2px;margin-bottom:8px;}
-.gc-card .gc-bal{font-size:2rem;font-weight:900;}
-.gc-card .gc-meta{font-size:.75rem;opacity:.8;margin-top:6px;}
-/* ===== INVENTORY ===== */
-.inv-table{width:100%;border-collapse:collapse;}
-.inv-table th{text-align:left;font-size:.75rem;text-transform:uppercase;color:var(--text2);padding:6px 8px;border-bottom:2px solid var(--border);}
-.inv-table td{padding:8px;border-bottom:1px solid var(--border);font-size:.88rem;}
-.inv-stock-ok{color:var(--green);font-weight:700;}
-.inv-stock-low{color:var(--orange,#f59e0b);font-weight:700;}
-.inv-stock-out{color:var(--red);font-weight:700;}
-.inv-stock-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:700;}
-.inv-stock-badge.ok{background:rgba(74,222,128,.15);color:var(--green);}
-.inv-stock-badge.low{background:rgba(245,158,11,.15);color:var(--orange,#f59e0b);}
-.inv-stock-badge.out{background:rgba(239,68,68,.15);color:var(--red);}
-/* ===== LABOR REPORTS ===== */
-.labor-table{width:100%;border-collapse:collapse;}
-.labor-table th{text-align:left;font-size:.75rem;text-transform:uppercase;color:var(--text2);padding:6px 8px;border-bottom:2px solid var(--border);}
-.labor-table td{padding:8px;border-bottom:1px solid var(--border);font-size:.88rem;}
-.labor-pct{font-weight:700;}
-.labor-pct.ok{color:var(--green);}
-.labor-pct.warn{color:var(--orange,#f59e0b);}
-.labor-pct.high{color:var(--red);}
-/* ===== CATERING ===== */
-.catering-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;}
-.catering-card .ct-header{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
-.catering-card .ct-name{font-weight:700;}
-.catering-card .ct-date{font-size:.8rem;color:var(--accent);font-weight:600;}
-.catering-card .ct-status{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:700;}
-.catering-card .ct-status.pending{background:rgba(245,158,11,.15);color:var(--orange,#f59e0b);}
-.catering-card .ct-status.confirmed{background:rgba(74,222,128,.15);color:var(--green);}
-.catering-card .ct-status.completed{background:rgba(96,165,250,.15);color:#60a5fa;}
-/* ===== QR CODE ===== */
-#menuQRCode canvas,#menuQRCode img{display:block;margin:10px auto;border-radius:8px;}
 </style>
 </head>
 <body>
@@ -703,7 +610,7 @@ input:checked+.toggle-track::after{left:23px;}
 <!-- ==================== CUSTOMER DISPLAY ==================== -->
 <div id="customerDisplay">
   <div class="cd-header">
-    <div class="cd-bar-name" id="cdBarName">🍽️ My Restaurant</div>
+    <div class="cd-bar-name" id="cdBarName">🍺 The Local</div>
     <div class="cd-clock" id="cdClock"></div>
   </div>
   <div class="cd-main" id="cdMain">
@@ -721,17 +628,6 @@ input:checked+.toggle-track::after{left:23px;}
 <div id="_printOverlay">
   <button class="_print-close-btn" onclick="_closePrintOverlay()" style="position:fixed;top:12px;right:12px;z-index:100000;background:#333;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:.9rem;cursor:pointer;">✕ Close</button>
   <div id="_printContent"></div>
-</div>
-
-<!-- GENERIC DYNAMIC MODAL -->
-<div class="modal-overlay hidden" id="dynModal" onclick="if(event.target===this)closeModal('dynModal')">
-  <div class="modal" style="max-width:520px;">
-    <div class="modal-header">
-      <div class="modal-title" id="dynModalTitle"></div>
-      <button class="modal-close" onclick="closeModal('dynModal')">✕</button>
-    </div>
-    <div class="modal-body" id="dynModalBody"></div>
-  </div>
 </div>
 
 <!-- ==================== LOGIN SCREEN ==================== -->
@@ -816,13 +712,10 @@ input:checked+.toggle-track::after{left:23px;}
 
   <!-- HEADER -->
   <header>
-    <div class="bar-name" id="headerBarName">🍽️ My Restaurant</div>
+    <div class="bar-name" id="headerBarName">🍺 The Local</div>
     <div class="nav-tabs" id="navTabs">
-      <button class="nav-tab active" onclick="showPage('posPage')" id="navPos">🍽️ POS</button>
-      <button class="nav-tab" onclick="showPage('kitchenPage')" id="navKitchen">🍳 Kitchen</button>
-      <button class="nav-tab owner-only manager-only" onclick="showPage('deliveryPage')" id="navDelivery">🛵 Delivery</button>
+      <button class="nav-tab active" onclick="showPage('posPage')" id="navPos">🍺 POS</button>
       <button class="nav-tab" onclick="showPage('reportsPage')" id="navReports">📊 Reports</button>
-      <button class="nav-tab owner-only manager-only" onclick="showPage('customersPage')" id="navCustomers">👤 Customers</button>
       <button class="nav-tab owner-only manager-only" onclick="showPage('employeesPage')" id="navEmployees">👥 Employees</button>
       <button class="nav-tab owner-only manager-only" onclick="showPage('menuPage')" id="navMenu">✏️ Menu</button>
       <button class="nav-tab" onclick="showPage('staffPage')" id="navStaff">📋 Staff &amp; Shifts</button>
@@ -837,7 +730,7 @@ input:checked+.toggle-track::after{left:23px;}
         <div><div class="session-name" id="sessionName"></div><div class="session-role" id="sessionRole"></div></div>
         <span class="shift-tip-pill" id="shiftTipPill" style="display:none;">💰 $0.00</span>
       </div>
-      <button class="btn btn-sm btn-ghost" style="color:var(--accent);font-weight:700;" onclick="showPage('kitchenPage')" title="Kitchen display">🍳 Kitchen</button>
+      <button class="btn btn-sm btn-ghost" style="color:var(--accent);font-weight:700;" onclick="enterEventMode()" title="Fast-pour event mode">⚡ Event</button>
       <button class="btn btn-sm btn-ghost" style="color:var(--purple);font-weight:700;" onclick="_openCustomerDisplay()" title="Open customer-facing display in new tab">📺 Display</button>
       <button class="btn btn-sm btn-ghost" style="color:var(--green);font-weight:700;" onclick="openCloseShift()">⏹ Close Shift</button>
       <button class="btn btn-sm btn-ghost" onclick="logout()">Log Out</button>
@@ -875,8 +768,8 @@ input:checked+.toggle-track::after{left:23px;}
       </div>
       <!-- Main Drinks / Food tabs -->
       <div class="main-tabs">
-        <button class="main-tab active drinks-active" id="mainTabDrinks" onclick="switchMainTab('drinks')">🥤 Beverages</button>
-        <button class="main-tab" id="mainTabFood" onclick="switchMainTab('food')">🍽️ Food</button>
+        <button class="main-tab active drinks-active" id="mainTabDrinks" onclick="switchMainTab('drinks')">🍺 Drinks</button>
+        <button class="main-tab" id="mainTabFood" onclick="switchMainTab('food')">🍔 Food</button>
       </div>
       <!-- Specials toggle (manager/owner only, food tab only) -->
       <div class="specials-toggle-bar hidden" id="specialsToggleBar">
@@ -911,7 +804,7 @@ input:checked+.toggle-track::after{left:23px;}
           </div>
         </div>
         <div class="order-items" id="orderItems">
-          <div class="order-empty"><div style="font-size:2rem">🍽️</div><div>Tap items to add</div></div>
+          <div class="order-empty"><div style="font-size:2rem">🍹</div><div>Tap items to add</div></div>
         </div>
         <div class="order-footer">
           <div class="totals">
@@ -937,14 +830,6 @@ input:checked+.toggle-track::after{left:23px;}
             <div class="order-actions-row">
               <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.78rem" onclick="openDiscountModal()" id="discountBtn" disabled>🏷 Discount</button>
               <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.78rem" onclick="reprintLastReceipt()" id="reprintBtn">🖨 Reprint</button>
-            </div>
-            <div class="order-actions-row">
-              <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.78rem;" onclick="openCateringModal()">📅 Catering</button>
-              <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.78rem;" onclick="gcSellModal()">🎁 Gift Card</button>
-            </div>
-            <div class="order-actions-row" id="fireKitchenRow" style="display:none;">
-              <button class="btn btn-sm" style="flex:1;font-size:.78rem;background:var(--orange,#f59e0b);color:#000;font-weight:700;" onclick="fireCurrentOrderToKitchen()">🍳 Fire to Kitchen</button>
-              <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.78rem;" onclick="printCurrentKitchenTicket()">🖨 Kitchen Ticket</button>
             </div>
           </div>
         </div>
@@ -998,9 +883,6 @@ input:checked+.toggle-track::after{left:23px;}
         <button class="report-tab-btn" id="rtAudit" onclick="setReportPeriod('audit')" style="color:var(--purple);">🔍 Audit Log</button>
         <button class="report-tab-btn" id="rtDisputes" onclick="setReportPeriod('disputes')" style="color:#f97316;">🚩 Disputes</button>
         <button class="report-tab-btn" id="rtShift" onclick="setReportPeriod('shift')" style="color:var(--green);">👥 Shift</button>
-        <button class="report-tab-btn" id="rtLabor" onclick="setReportPeriod('labor')" style="color:var(--accent);">⏱ Labor</button>
-        <button class="report-tab-btn" id="rtGC" onclick="setReportPeriod('giftcards')" style="color:var(--purple,#7c3aed);">🎁 Gift Cards</button>
-        <button class="report-tab-btn" id="rtCatering" onclick="setReportPeriod('catering')" style="color:#f97316;">📅 Catering</button>
       </div>
       <!-- View toggle: All / Bar / Kitchen -->
       <div style="display:flex;gap:6px;margin-top:6px;margin-bottom:2px;">
@@ -1105,46 +987,6 @@ input:checked+.toggle-track::after{left:23px;}
         <table class="report-table" id="recentTransTable"></table>
       </div>
       </div><!-- end reportsMainSection -->
-
-      <!-- LABOR REPORT SECTION -->
-      <div id="laborSection" style="display:none;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
-          <div class="section-title" style="margin-bottom:0;">⏱ Labor Report</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            <button class="btn btn-sm labor-range-btn btn-ghost" onclick="laborSetRange(1,this)">Today</button>
-            <button class="btn btn-sm labor-range-btn btn-accent" onclick="laborSetRange(7,this)">7 Days</button>
-            <button class="btn btn-sm labor-range-btn btn-ghost" onclick="laborSetRange(14,this)">14 Days</button>
-            <button class="btn btn-sm labor-range-btn btn-ghost" onclick="laborSetRange(30,this)">30 Days</button>
-          </div>
-        </div>
-        <div id="laborSummary"></div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
-          <table class="labor-table">
-            <thead><tr><th>Employee</th><th>Hours</th><th>Rate</th><th>Labor Cost</th></tr></thead>
-            <tbody id="laborReportBody"></tbody>
-          </table>
-        </div>
-        <div style="font-size:.75rem;color:var(--text2);margin-top:10px;">Labor % target: &lt;25% = ✅ good · 25–35% = ⚠️ watch · &gt;35% = 🔴 high. Rates pulled from employee profiles.</div>
-      </div>
-
-      <!-- GIFT CARDS SECTION -->
-      <div id="gcSection" style="display:none;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
-          <div class="section-title" style="margin-bottom:0;">🎁 Gift Cards</div>
-          <button class="btn btn-sm btn-accent" onclick="gcSellModal()">+ Issue Gift Card</button>
-        </div>
-        <div id="gcListContainer" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div>
-      </div>
-
-      <!-- CATERING SECTION -->
-      <div id="cateringSection" style="display:none;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
-          <div class="section-title" style="margin-bottom:0;">📅 Catering &amp; Future Orders</div>
-          <button class="btn btn-sm btn-accent" onclick="openCateringModal()">+ New Order</button>
-        </div>
-        <div id="cateringListContainer"></div>
-      </div>
-
     </div>
   </div>
 
@@ -1164,21 +1006,11 @@ input:checked+.toggle-track::after{left:23px;}
     <div style="width:100%;overflow-y:auto;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
         <div class="section-title">⏱ Staff &amp; Shifts</div>
-        <div style="display:flex;gap:7px;flex-wrap:wrap;">
+        <div style="display:flex;gap:7px;">
           <button class="btn btn-sm btn-ghost" onclick="renderStaffPage()">🔄 Refresh</button>
           <button class="btn btn-sm btn-blue" onclick="openTipPoolModal()">💰 Tip Pool</button>
           <button class="btn btn-sm btn-accent" onclick="openShiftNotesModal()">📝 Shift Notes</button>
-          <button class="btn btn-sm" style="background:var(--green);color:#fff;" onclick="openPayrollExport()">⬇ Payroll CSV</button>
         </div>
-      </div>
-      <!-- TIME CLOCK -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-          <div class="section-label">🕐 Time Clock</div>
-          <button class="btn btn-sm btn-accent" onclick="tcClockIn()">Clock In</button>
-        </div>
-        <div id="tcCurrentlyIn" style="margin-bottom:8px;"></div>
-        <div id="tcTodaySummary"></div>
       </div>
       <!-- Cash Reconciliation (managers/owners only) -->
       <div class="owner-only manager-only" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px;">
@@ -1186,20 +1018,6 @@ input:checked+.toggle-track::after{left:23px;}
           <div class="section-label" style="margin-bottom:0;">💵 Cash Reconciliation</div>
         </div>
         <div id="cashReconPanel"></div>
-      </div>
-      <!-- EMPLOYEE SCHEDULE -->
-      <div class="owner-only manager-only" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
-          <div class="section-label" style="margin-bottom:0;">📅 Weekly Schedule</div>
-          <div style="display:flex;gap:6px;">
-            <button class="btn btn-sm btn-ghost" onclick="schedPrevWeek()">← Prev</button>
-            <span id="schedWeekLabel" style="font-size:.82rem;font-weight:700;line-height:28px;"></span>
-            <button class="btn btn-sm btn-ghost" onclick="schedNextWeek()">Next →</button>
-            <button class="btn btn-sm btn-accent" onclick="openAddShiftModal()">+ Add Shift</button>
-          </div>
-        </div>
-        <div id="schedLaborPreview" style="font-size:.78rem;color:var(--text2);margin-bottom:10px;"></div>
-        <div id="schedCalendar" style="overflow-x:auto;"></div>
       </div>
       <!-- Recent Shift Notes -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;">
@@ -1222,46 +1040,19 @@ input:checked+.toggle-track::after{left:23px;}
           <button class="btn btn-sm btn-accent" onclick="openAddItemModal()">+ Add Item</button>
         </div>
       </div>
-      <!-- Menu / Inventory tab row -->
+      <!-- Drinks / Food tab row -->
       <div style="display:flex;gap:0;margin-bottom:14px;border:1px solid var(--border);border-radius:8px;overflow:hidden;">
         <button id="menuMgmtTabDrinks" onclick="setMenuMgmtTab('drinks')"
           style="flex:1;padding:8px 12px;border:none;cursor:pointer;font-size:.85rem;font-weight:700;background:var(--accent);color:#000;transition:all .15s;">
-          🥤 Drinks
+          🍺 Drinks
         </button>
         <button id="menuMgmtTabFood" onclick="setMenuMgmtTab('food')"
           style="flex:1;padding:8px 12px;border:none;border-left:1px solid var(--border);cursor:pointer;font-size:.85rem;font-weight:700;background:var(--surface2);color:var(--text);transition:all .15s;">
           🍳 Food
         </button>
-        <button id="menuMgmtTabInv" onclick="setMenuMgmtTab('inventory')"
-          style="flex:1;padding:8px 12px;border:none;border-left:1px solid var(--border);cursor:pointer;font-size:.85rem;font-weight:700;background:var(--surface2);color:var(--text);transition:all .15s;">
-          📦 Inventory
-        </button>
       </div>
-      <!-- Menu table (drinks/food) -->
-      <div id="menuTableWrap" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
         <table class="report-table" id="menuTable"></table>
-      </div>
-      <!-- Inventory panel (hidden until tab selected) -->
-      <div id="menuInvPanel" style="display:none;">
-        <div id="invLowBanner" style="display:none;background:rgba(245,158,11,.12);border:1px solid var(--orange,#f59e0b);border-radius:var(--radius);padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--orange,#f59e0b);"></div>
-        <!-- Add item row -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin-bottom:12px;">
-          <div style="font-size:.82rem;font-weight:700;color:var(--text2);margin-bottom:8px;">ADD INVENTORY ITEM</div>
-          <div style="display:grid;grid-template-columns:2fr 1fr 80px 80px 80px;gap:8px;align-items:end;">
-            <input class="form-input" id="invNewName" placeholder="Item name">
-            <input class="form-input" id="invNewCat" placeholder="Category">
-            <input class="form-input" id="invNewQty" type="number" min="0" placeholder="Qty">
-            <input class="form-input" id="invNewPar" type="number" min="0" placeholder="Par">
-            <input class="form-input" id="invNewUnit" placeholder="unit">
-          </div>
-          <button class="btn btn-sm btn-accent" style="margin-top:8px;" onclick="invAddItem()">+ Add Item</button>
-        </div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
-          <table class="inv-table">
-            <thead><tr><th>Item</th><th>Category</th><th>Qty on Hand</th><th>Par Level</th><th>Status</th><th>Unit</th></tr></thead>
-            <tbody id="inventoryTable"></tbody>
-          </table>
-        </div>
       </div>
     </div>
   </div>
@@ -1329,66 +1120,6 @@ input:checked+.toggle-track::after{left:23px;}
     </div>
   </div>
 
-  <!-- CUSTOMERS PAGE -->
-  <div class="page" id="customersPage">
-    <div style="width:100%;max-width:1000px;margin:0 auto;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
-        <div class="section-title" style="margin-bottom:0;">👤 Customers</div>
-        <div style="flex:1;"></div>
-        <input class="form-input" id="custSearch" placeholder="🔍 Search name or phone…" oninput="renderCustomerList()" style="max-width:220px;">
-        <button class="btn btn-sm btn-accent" onclick="openAddCustomerModal()">+ New Customer</button>
-      </div>
-      <!-- Loyalty stats -->
-      <div id="custStatsRow" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px;"></div>
-      <!-- Customer list -->
-      <div id="customerListContainer"></div>
-    </div>
-  </div>
-
-  <!-- KITCHEN DISPLAY PAGE -->
-  <div class="page" id="kitchenPage">
-    <div style="width:100%;max-width:1400px;margin:0 auto;">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap;">
-        <div class="section-title" style="margin-bottom:0;">🍳 Kitchen Display</div>
-        <div id="kdsStatsBar" style="display:flex;gap:10px;flex:1;flex-wrap:wrap;"></div>
-        <button class="btn btn-sm btn-accent" onclick="kdsNewManualTicket()">+ Manual Ticket</button>
-        <button class="btn btn-sm" style="background:var(--surface2);color:var(--text2);" onclick="kdsClearDone()">🗑 Clear Done</button>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap;">
-        <span style="font-size:.8rem;color:var(--text2);font-weight:600;">View:</span>
-        <button class="btn btn-sm kds-filter active" onclick="kdsFilter('active',this)">🔴 Active</button>
-        <button class="btn btn-sm kds-filter" onclick="kdsFilter('all',this)">All</button>
-        <button class="btn btn-sm kds-filter" onclick="kdsFilter('new',this)">🆕 New</button>
-        <button class="btn btn-sm kds-filter" onclick="kdsFilter('fired',this)">🔥 Fired</button>
-        <button class="btn btn-sm kds-filter" onclick="kdsFilter('done',this)">✔ Done</button>
-        <div style="flex:1;"></div>
-        <button class="btn btn-sm" style="background:var(--surface2);color:var(--text2);" onclick="renderKitchenPage()">↻ Refresh</button>
-      </div>
-      <div id="kdsTicketGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;"></div>
-    </div>
-  </div>
-
-  <!-- DELIVERY PAGE -->
-  <div class="page" id="deliveryPage">
-    <div style="width:100%;max-width:1100px;margin:0 auto;">
-      <div class="section-title" style="margin-bottom:14px;">🛵 Delivery Orders</div>
-      <div id="deliveryPlatformBar" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;"></div>
-      <div id="deliveryStatsRow" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px;"></div>
-      <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap;">
-        <span style="font-size:.8rem;color:var(--text2);font-weight:600;">Filter:</span>
-        <button class="btn btn-sm dlv-filter active" onclick="deliveryFilter('all',this)">All</button>
-        <button class="btn btn-sm dlv-filter" onclick="deliveryFilter('pending',this)">🔔 Pending</button>
-        <button class="btn btn-sm dlv-filter" onclick="deliveryFilter('accepted',this)">✅ Accepted</button>
-        <button class="btn btn-sm dlv-filter" onclick="deliveryFilter('ready',this)">📦 Ready</button>
-        <button class="btn btn-sm dlv-filter" onclick="deliveryFilter('completed',this)">✔ Done</button>
-        <button class="btn btn-sm dlv-filter" onclick="deliveryFilter('rejected',this)">✖ Rejected</button>
-        <div style="flex:1;"></div>
-        <button class="btn btn-sm" style="background:var(--surface2);color:var(--text2);" onclick="_dlvSimulateOrder()">⚡ Simulate Order</button>
-      </div>
-      <div id="deliveryOrdersList"></div>
-    </div>
-  </div>
-
   <!-- SETTINGS PAGE -->
   <div class="page" id="settingsPage">
     <div style="width:100%;">
@@ -1434,7 +1165,7 @@ input:checked+.toggle-track::after{left:23px;}
         <!-- Happy Hour -->
         <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <div style="font-size:.85rem;font-weight:700;">🏷️ Special Pricing Windows</div>
+            <div style="font-size:.85rem;font-weight:700;">🍺 Happy Hour Pricing</div>
             <button class="btn btn-sm btn-accent" onclick="addHappyHour()" style="font-size:.72rem;padding:3px 9px;">+ Add Window</button>
           </div>
           <div style="font-size:.72rem;color:var(--text2);margin-bottom:8px;">Automatically apply a % discount during set time windows. Stacks with nothing — manual discounts take priority.</div>
@@ -1458,28 +1189,6 @@ input:checked+.toggle-track::after{left:23px;}
               <span class="toggle-track" id="receiptQRSlider" style="background:var(--border);" onclick="document.getElementById('settingShowReceiptQR').click()"></span>
             </label>
           </div>
-        </div>
-        <!-- Online Ordering & QR Menu -->
-        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:12px;">
-          <div style="font-size:.85rem;font-weight:700;margin-bottom:6px;">🌐 Online Ordering &amp; QR Menu</div>
-          <div style="font-size:.72rem;color:var(--text2);margin-bottom:8px;">Share a public ordering link or QR code. Customers order for pickup and it fires straight to the kitchen.</div>
-          <div class="form-group" style="margin-bottom:8px;"><label class="form-label">Public Menu / Order URL</label><input class="form-input" id="settingOnlineOrderUrl" placeholder="https://yoursite.com/order" oninput="_safeSettingsSave()"></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;">
-            <div id="menuQRCode" style="background:#fff;padding:8px;border-radius:6px;display:inline-block;min-width:80px;min-height:80px;display:flex;align-items:center;justify-content:center;color:#999;font-size:.72rem;">QR here</div>
-            <div style="flex:1;">
-              <button class="btn btn-sm btn-accent" onclick="generateMenuQR()" style="margin-bottom:6px;">📱 Generate QR Code</button><br>
-              <button class="btn btn-sm btn-ghost" onclick="openOnlineOrderPage()">🌐 Open Order Page</button>
-            </div>
-          </div>
-        </div>
-        <!-- Loyalty Settings -->
-        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:12px;">
-          <div style="font-size:.85rem;font-weight:700;margin-bottom:6px;">⭐ Loyalty Program</div>
-          <div class="form-row">
-            <div class="form-group"><label class="form-label">Points per $1 spent</label><input class="form-input" id="settingLoyaltyPPD" type="number" min="0" step="1" placeholder="1"></div>
-            <div class="form-group"><label class="form-label">Points to earn $1 reward</label><input class="form-input" id="settingLoyaltyThreshold" type="number" min="1" step="1" placeholder="100"></div>
-          </div>
-          <div style="font-size:.72rem;color:var(--text2);">Example: 1 pt/$1, 100 pts = $1 off (1% back). Set to 0 to disable.</div>
         </div>
         <!-- Sales Goals -->
         <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;">
@@ -1582,46 +1291,14 @@ input:checked+.toggle-track::after{left:23px;}
           The printer and iPad must be on the same Wi-Fi network.
         </div>
         <div class="form-group">
-          <label class="form-label">Receipt Printer IP <span style="font-weight:400;color:var(--text2)">(cash drawer kicks through this printer)</span></label>
+          <label class="form-label">Printer IP Address <span style="font-weight:400;color:var(--text2)">(e.g. 192.168.1.105)</span></label>
           <input class="form-input" id="settingPrinterIp" placeholder="192.168.1.105">
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-          <div class="form-group">
-            <label class="form-label">🍺 Bar Printer IP</label>
-            <input class="form-input" id="settingPrinterBarIp" placeholder="192.168.1.106">
-          </div>
-          <div class="form-group">
-            <label class="form-label">🍳 Kitchen Printer IP</label>
-            <input class="form-input" id="settingPrinterKitchenIp" placeholder="192.168.1.107">
-          </div>
-        </div>
-        <div style="font-size:.72rem;color:var(--text2);margin-bottom:8px;">Drink categories → Bar Printer · Food categories → Kitchen Printer · Both print when item matches both (e.g. apps with a cocktail)</div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
           <button class="btn btn-md btn-blue" onclick="savePrinterSettings()" style="flex:1;">Save Printer Settings</button>
           <button class="btn btn-md btn-ghost" onclick="testCashDrawer()" style="flex:1;">🔔 Test Drawer Kick</button>
         </div>
         <div id="printerTestResult" style="font-size:.72rem;margin-top:8px;min-height:16px;"></div>
-      </div>
-
-      <!-- MULTI-TAX RATES -->
-      <div class="settings-section">
-        <div class="section-label" style="margin-bottom:10px;">🧾 Tax Rates by Category</div>
-        <div style="font-size:.72rem;color:var(--text2);margin-bottom:10px;">Set different tax rates for food, beverages, and packaged goods. Leave Packaged at 0% if you don't sell retail items.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-          <div class="form-group">
-            <label class="form-label">🍽️ Food Tax %</label>
-            <input class="form-input" id="settingTaxRateFood" type="number" step="0.01" min="0" max="30" placeholder="8.0">
-          </div>
-          <div class="form-group">
-            <label class="form-label">🥤 Beverage Tax %</label>
-            <input class="form-input" id="settingTaxRateBev" type="number" step="0.01" min="0" max="30" placeholder="8.0">
-          </div>
-          <div class="form-group">
-            <label class="form-label">📦 Packaged Goods %</label>
-            <input class="form-input" id="settingTaxRatePkg" type="number" step="0.01" min="0" max="30" placeholder="0.0">
-          </div>
-        </div>
-        <div style="font-size:.7rem;color:var(--text2);">The Tax Rate field above still applies as the global default for any category not matched.</div>
       </div>
 
       <!-- CUSTOMER DISPLAY IMAGE -->
@@ -1796,7 +1473,7 @@ input:checked+.toggle-track::after{left:23px;}
         <select class="form-input" id="empDept">
           <option value="bar">🍺 Bar</option>
           <option value="kitchen">🍳 Kitchen</option>
-          <option value="both">🍽️🍳 Both</option>
+          <option value="both">🍺🍳 Both</option>
         </select>
         <div style="font-size:.72rem;color:var(--text2);margin-top:3px;">Controls which tip pool this employee belongs to.</div>
       </div>
@@ -1842,19 +1519,6 @@ input:checked+.toggle-track::after{left:23px;}
       <div class="form-group">
         <label class="form-label">⚡ Quick Options <span style="font-weight:400;color:var(--text2)">(comma-separated, e.g. Rocks, Neat, Up, Dirty)</span></label>
         <input class="form-input" id="menuItemQuickOptions" placeholder="Rocks, Neat, Up, Dirty, Splash…">
-      </div>
-      <!-- Item Photo -->
-      <div class="form-group">
-        <label class="form-label">📸 Item Photo <span style="font-weight:400;color:var(--text2)">(optional — shown in POS and online ordering)</span></label>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div id="menuItemPhotoPreview" style="width:60px;height:60px;border-radius:8px;border:1px dashed var(--border);background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;overflow:hidden;">📷</div>
-          <div style="flex:1;">
-            <input type="file" id="menuItemPhotoFile" accept="image/*" style="display:none;" onchange="_previewMenuPhoto(this)">
-            <button class="btn btn-sm btn-ghost" onclick="document.getElementById('menuItemPhotoFile').click()">Upload Photo</button>
-            <button class="btn btn-sm btn-ghost" onclick="_clearMenuPhoto()" style="margin-left:6px;color:var(--red);">Remove</button>
-          </div>
-        </div>
-        <input type="hidden" id="menuItemPhotoData">
       </div>
       <!-- 86 toggle -->
       <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;">
@@ -2317,7 +1981,7 @@ function _safeSettingsSave(){
   _lsSave('pos2_settings', settingsForStorage);
 }
 
-let settings = Object.assign({barName:'My Restaurant',taxRate:8,taxRateFood:8,taxRateBeverage:8,taxRatePackaged:0,tips:[15,18,20,25],helcimToken:'',helcimTerminal:'',helcimCurrency:'USD',helcimProxy:'',twilioSid:'',twilioToken:'',twilioFrom:'',sendgridKey:'',receiptFromEmail:'',printerIp:'',printerBarIp:'',printerKitchenIp:'',cdImage:'',autoPrint:false,gratuityPct:0,gratuityMin:50,logoutTimeout:30,chime:'ascending',theme:'dark',dailyGoal:0,weeklyGoal:0,discountPresets:[{name:'Employee',pct:50,flat:0},{name:'Senior',pct:10,flat:0},{name:'Military',pct:15,flat:0}],receiptFooter:'Thank you! Come back soon! 😊',showReceiptQR:true,happyHours:[{id:1,name:'Lunch Special',startTime:'11:00',endTime:'14:00',days:[1,2,3,4,5],discountPct:10,enabled:false}],dashboardPin:'0000',foodSpecialsEnabled:true,modifierPriceDefaults:{},voidReasons:['Customer Complaint','Wrong Item','Server Error','Manager Comp','Quality Issue','Spilled','Duplicate','Other'],compReasons:['Manager Approved','VIP Guest','Birthday','Quality Issue','Goodwill','Staff Meal','Other']},
+let settings = Object.assign({barName:'The Local',taxRate:8,tips:[15,18,20,25],helcimToken:'',helcimTerminal:'',helcimCurrency:'USD',helcimProxy:'',twilioSid:'',twilioToken:'',twilioFrom:'',sendgridKey:'',receiptFromEmail:'',printerIp:'',cdImage:'',autoPrint:false,gratuityPct:0,gratuityMin:50,logoutTimeout:5,chime:'ascending',theme:'dark',dailyGoal:0,weeklyGoal:0,discountPresets:[{name:'Employee',pct:50,flat:0},{name:'Industry',pct:25,flat:0},{name:'Military',pct:15,flat:0}],receiptFooter:'Thank you! Drink responsibly 🍺',showReceiptQR:true,happyHours:[{id:1,name:'Happy Hour',startTime:'16:00',endTime:'19:00',days:[1,2,3,4,5],discountPct:20,enabled:true}],dashboardPin:'0000',foodSpecialsEnabled:true,modifierPriceDefaults:{}},
   _safeParse('pos2_settings',{}));
 
 let employees = _safeParse('pos2_employees', null) || [
@@ -2643,32 +2307,58 @@ let _eventTab = 'drinks'; // 'drinks' or 'food'
 let _pinnedItems = _safeParse('pinnedItems', {});
 
 const DRINK_CATS = [
-  // Coffee & Tea
-  'Coffee','Espresso Drinks','Tea','Hot Chocolate','Chai',
-  // Cold Drinks
-  'Soft Drinks','Lemonade','Iced Tea','Juice','Sparkling Water','Bottled Water',
-  // Shakes & Smoothies
-  'Milkshakes','Smoothies','Floats',
-  // Specialty
-  'Specialty Drinks','Kids Drinks','Beverages','Non-Alcoholic',
+  // Draft Beer
+  'Draft - Craft/Local','Draft - Domestic',
+  // Canned & Bottled Beer
+  'Canned/Bottle - Craft','Canned/Bottle - Domestic','Canned/Bottle - Import',
+  // Wine by the Glass
+  'Wine BTG - Red','Wine BTG - White','Wine BTG - Sparkling','Wine BTG - Rosé',
+  // Wine by the Bottle
+  'Wine BTB - Red','Wine BTB - White','Wine BTB - Sparkling','Wine BTB - Rosé',
+  // Whiskey
+  'Bourbon','Rye','Scotch','Irish Whiskey','Canadian Whisky','Japanese Whisky',
+  // Tequila & Mezcal
+  'Tequila Blanco','Tequila Reposado','Tequila Añejo','Tequila Extra Añejo','Mezcal',
+  // Rum
+  'Rum - White','Rum - Dark','Rum - Spiced','Rum - Aged/Premium',
+  // Vodka & Gin
+  'Vodka','Gin',
+  // Cognac & Brandy
+  'Cognac VS','Cognac VSOP','Cognac XO','Armagnac','Brandy',
+  // Other
+  'Herbal - Amaro','Herbal - Absinthe','Herbal - Liqueur','Herbal - Aquavit',
+  'Liqueurs/Cordials','Cocktails','Shots',
+  // Non-Alcoholic
+  'NA - Soda','NA - Juice','NA - Energy Drink','NA - Mocktail',
+  'NA Beer - Craft','NA Beer - Domestic','NA Beer - Import',
+  // Legacy (catch-all for any existing unsorted items)
+  'Beer','Wine','Spirits','Non-Alcoholic','Rum','Tequila','Gin','Vodka','NA - Beer',
 ];
 
 // ── DRINK GROUPS: two-level navigation structure ────────
 const DRINK_GROUPS = [
-  {id:'coffee',  label:'☕ Coffee & Tea',     short:'Coffee',   color:'coffee',  cats:['Coffee','Espresso Drinks','Tea','Hot Chocolate','Chai']},
-  {id:'cold',    label:'🥤 Cold Drinks',      short:'Cold',     color:'cold',    cats:['Soft Drinks','Lemonade','Iced Tea','Juice','Sparkling Water','Bottled Water']},
-  {id:'shakes',  label:'🥛 Shakes & Smoothies',short:'Shakes',  color:'shake',   cats:['Milkshakes','Smoothies','Floats']},
-  {id:'na',      label:'🍹 Specialty',        short:'Specialty',color:'na',      cats:['Specialty Drinks','Kids Drinks','Beverages','Non-Alcoholic']},
+  {id:'draft',   label:'🍺 Draft',          short:'Draft',          color:'beer',    cats:['Draft - Craft/Local','Draft - Domestic']},
+  {id:'canned',  label:'🍺 Canned/Bottle',  short:'Canned/Bottle',  color:'beer',    cats:['Canned/Bottle - Craft','Canned/Bottle - Domestic','Canned/Bottle - Import']},
+  {id:'wineBTG', label:'🍷 Wine by Glass',  short:'Wine by Glass',  color:'wine',    cats:['Wine BTG - Red','Wine BTG - White','Wine BTG - Sparkling','Wine BTG - Rosé']},
+  {id:'wineBTB', label:'🍾 Wine by Bottle', short:'Wine by Bottle', color:'wine',    cats:['Wine BTB - Red','Wine BTB - White','Wine BTB - Sparkling','Wine BTB - Rosé']},
+  {id:'whiskey', label:'🥃 Whiskey',         short:'Whiskey',        color:'whiskey', cats:['Bourbon','Rye','Scotch','Irish Whiskey','Canadian Whisky','Japanese Whisky']},
+  {id:'tequila', label:'🌵 Tequila & Mezcal',short:'Tequila',       color:'tequila', cats:['Tequila Blanco','Tequila Reposado','Tequila Añejo','Tequila Extra Añejo','Mezcal']},
+  {id:'rum',     label:'🍹 Rum',             short:'Rum',            color:'rum',     cats:['Rum - White','Rum - Dark','Rum - Spiced','Rum - Aged/Premium']},
+  {id:'vodka',   label:'🧊 Vodka',           short:'Vodka',          color:'vodka',   cats:['Vodka']},
+  {id:'gin',     label:'🌿 Gin',             short:'Gin',            color:'gin',     cats:['Gin']},
+  {id:'cognac',  label:'🥃 Cognac & Brandy', short:'Cognac',         color:'cognac',  cats:['Cognac VS','Cognac VSOP','Cognac XO','Armagnac','Brandy']},
+  {id:'herbal',  label:'🌿 Herbal & Botanical',short:'Herbal',       color:'herbal',  cats:['Herbal - Amaro','Herbal - Absinthe','Herbal - Liqueur','Herbal - Aquavit']},
+  {id:'liqueur', label:'🍭 Liqueurs',        short:'Liqueurs',       color:'liqueur', cats:['Liqueurs/Cordials']},
+  {id:'cocktail',label:'🍸 Cocktails',       short:'Cocktails',      color:'cocktail',cats:['Cocktails']},
+  {id:'shots',   label:'💥 Shots',           short:'Shots',          color:'shots',   cats:['Shots']},
+  {id:'nabeer',  label:'🍺 NA Beer',          short:'NA Beer',        color:'beer',    cats:['NA Beer - Craft','NA Beer - Domestic','NA Beer - Import']},
+  {id:'na',      label:'🥤 N/A',             short:'N/A',            color:'na',      cats:['NA - Soda','NA - Juice','NA - Energy Drink','NA - Mocktail']},
 ];
 
 // Flat cat→color map for item card borders
 const CAT_COLOR_MAP=(()=>{const m={};DRINK_GROUPS.forEach(g=>g.cats.forEach(c=>m[c]=g.color));return m;})();
-const DRINK_COLOR_HEX={coffee:'#8B5E3C',cold:'#3DAA6A',shake:'#C44A7E',na:'#3D7A9E'};
-const FOOD_CATS = [
-  'Breakfast','Brunch','Appetizers','Soups','Salads',
-  'Sandwiches','Burgers','Entrees','Pasta','Sides',
-  'Kids Menu','Desserts','Specials','Food'
-];
+const DRINK_COLOR_HEX={beer:'#D4900A',wine:'#7B3F9E',whiskey:'#C47A1E',tequila:'#6B9E3A',rum:'#B5541A',vodka:'#4A84C4',gin:'#2A9D8F',cognac:'#8B3A5E',herbal:'#3D7A45',liqueur:'#C44A7E',cocktail:'#26B5A0',shots:'#E05A30',na:'#3DAA6A'};
+const FOOD_CATS  = ['Appetizers','Salads','Burgers & Sandwiches','Entrees','Specials','Food'];
 
 // ---- NEW FEATURE STATE ----
 // Shift notes
@@ -2824,7 +2514,7 @@ function logout(fromInactivity=false){
 function setupForUser(){
   const emp=currentUser;
   const roleColor=emp.role==='owner'?'var(--owner)':emp.role==='manager'?'var(--manager)':emp.role==='dev'?'var(--dev)':'var(--worker)';
-  document.getElementById('headerBarName').textContent='🍽️ '+settings.barName;
+  document.getElementById('headerBarName').textContent='🍺 '+settings.barName;
   document.getElementById('sessionAvatar').style.cssText=`background:${emp.color}22;color:${emp.color}`;
   document.getElementById('sessionAvatar').textContent=emp.emoji;
   document.getElementById('sessionName').textContent=emp.name;
@@ -2855,11 +2545,7 @@ function showPage(pageId){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
-  const map={posPage:'navPos',reportsPage:'navReports',employeesPage:'navEmployees',menuPage:'navMenu',staffPage:'navStaff',settingsPage:'navSettings',devPage:'devNavBtn',kitchenPage:'navKitchen',deliveryPage:'navDelivery',customersPage:'navCustomers'};
-  if(pageId==='kitchenPage')renderKitchenPage&&renderKitchenPage();
-  if(pageId==='deliveryPage')renderDeliveryPage&&renderDeliveryPage();
-  if(pageId==='customersPage')typeof renderCustomerList==='function'&&renderCustomerList();
-  if(pageId==='reportsPage')typeof renderLaborReport==='function'&&renderLaborReport();
+  const map={posPage:'navPos',reportsPage:'navReports',employeesPage:'navEmployees',menuPage:'navMenu',staffPage:'navStaff',settingsPage:'navSettings',devPage:'devNavBtn'};
   const navEl=document.getElementById(map[pageId]);
   if(navEl)navEl.classList.add('active');
   if(pageId==='reportsPage')renderReports();
@@ -3044,7 +2730,7 @@ function makeMenuCard(item,myPins){
   // Color-coded top border for drink categories
   const _cc=CAT_COLOR_MAP[item.cat];
   if(_cc&&DRINK_COLOR_HEX[_cc])el.style.borderTop='3px solid '+DRINK_COLOR_HEX[_cc];
-  el.innerHTML=`<button class="pin-star${isPinned?' pinned':''}" title="${isPinned?'Unpin':'Pin to favorites'}" onclick="togglePin(event,${item.id})">${isPinned?'⭐':'☆'}</button>${item.photo?`<div style="width:100%;height:54px;border-radius:6px;overflow:hidden;margin-bottom:2px;"><img src="${item.photo}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>`:`<div class="item-emoji">${item.emoji}</div>`}<div class="item-name">${item.name}</div><div class="item-price">$${item.price.toFixed(2)}</div>`;
+  el.innerHTML=`<button class="pin-star${isPinned?' pinned':''}" title="${isPinned?'Unpin':'Pin to favorites'}" onclick="togglePin(event,${item.id})">${isPinned?'⭐':'☆'}</button><div class="item-emoji">${item.emoji}</div><div class="item-name">${item.name}</div><div class="item-price">$${item.price.toFixed(2)}</div>`;
   if(sixed){el.onclick=(e)=>{if(e.target.classList.contains('pin-star'))return;showToast(`${item.name} is 86'd — not available`,'error');};}
   else{el.onclick=(e)=>{if(e.target.classList.contains('pin-star'))return;addToOrder(item);};}
   return el;
@@ -3357,43 +3043,9 @@ function changeQty(lineIdx,delta){
 function compItem(lineIdx){
   if(lineIdx<0||lineIdx>=currentOrder.length)return;
   const item=currentOrder[lineIdx];
-  if(item.comped){
-    // Removing a comp — no reason needed
-    item.comped=false;item.compReason='';
-    renderOrderDebounced();showToast(`${item.name} comp removed`,'info');
-    return;
-  }
-  // Adding a comp — require a reason (owners/managers only)
-  const role=currentUser?currentUser.role:'';
-  if(role==='worker'){showToast('Only managers and owners can comp items','error');return;}
-  const reasons=(settings.compReasons||['Manager Approved','VIP Guest','Quality Issue','Goodwill','Staff Meal','Other']);
-  const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-    <div style="font-size:.85rem;color:var(--text2);">Comping: <strong>${item.name}</strong> (${item.qty}×$${item.price.toFixed(2)})</div>
-    <div><label class="form-label">Comp Reason *</label>
-      <select class="form-input" id="compReasonSel">
-        <option value="">— Select reason —</option>
-        ${reasons.map(r=>`<option>${r}</option>`).join('')}
-      </select>
-    </div>
-    <div><label class="form-label">Notes (optional)</label>
-      <input class="form-input" id="compReasonNote" placeholder="Additional details…"></div>
-    <div style="display:flex;gap:8px;">
-      <button class="btn btn-md btn-accent" style="flex:1;" onclick="_confirmComp(${lineIdx})">✅ Comp Item</button>
-      <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-    </div>
-  </div>`;
-  openModal&&openModal('Comp Item',html);
-}
-function _confirmComp(lineIdx){
-  const reason=(document.getElementById('compReasonSel')?.value||'').trim();
-  const note=(document.getElementById('compReasonNote')?.value||'').trim();
-  if(!reason){showToast('Select a comp reason','error');return;}
-  if(lineIdx<0||lineIdx>=currentOrder.length){closeModal&&closeModal();return;}
-  const item=currentOrder[lineIdx];
-  item.comped=true;item.compReason=reason;item.compNote=note||'';
-  closeModal&&closeModal();
-  renderOrderDebounced();showToast(`${item.name} comped: ${reason}`,'info');
-  if(typeof _log==='function')_log('info','Comp',`${item.name} comped: ${reason}`,currentUser?.name);
+  if(item.comped){item.comped=false;}else{item.comped=true;}
+  renderOrderDebounced();
+  showToast(item.comped?`${item.name} comped`:`${item.name} comp removed`,'info');
 }
 
 function confirmClearOrder(){
@@ -3481,34 +3133,17 @@ function getActiveHappyHour(){
   return null;
 }
 
-function _itemTaxRate(item){
-  const cat=item.cat||item.category||'';
-  const pkgCats=['Packaged Goods','Retail','Bottled','Merchandise'];
-  if(pkgCats.includes(cat))return(settings.taxRatePackaged??0)/100;
-  if(DRINK_CATS.includes(cat))return(settings.taxRateBeverage??settings.taxRate)/100;
-  if(FOOD_CATS.includes(cat))return(settings.taxRateFood??settings.taxRate)/100;
-  return settings.taxRate/100; // fallback
-}
-function _calcItemizedTax(items,discountFactor=1){
-  // Sum per-item tax after applying a discount factor (0–1)
-  return _currencyRound(items.reduce((s,i)=>{
-    if(i.comped)return s;
-    const lineTotal=(i.price+(i.modTotal||0))*i.qty*discountFactor;
-    return s+lineTotal*_itemTaxRate(i);
-  },0));
-}
 function getOrderTotal(tipPct=0){
   let subtotal=_currencyRound(currentOrder.reduce((s,i)=>s+(i.comped?0:(i.price+(i.modTotal||0))*i.qty),0));
   let hhDiscount=0;
-  let discountFactor=1;
   // Apply manual discount first; if none, check happy hour
-  if(_discountPct>0){discountFactor=1-_discountPct/100;subtotal=_currencyRound(subtotal*discountFactor);}
-  else if(_discountFlat>0){const r=Math.max(0,subtotal-_discountFlat)/subtotal;discountFactor=isFinite(r)?r:1;subtotal=_currencyRound(Math.max(0,subtotal-_discountFlat));}
+  if(_discountPct>0){subtotal=_currencyRound(subtotal*(1-_discountPct/100));}
+  else if(_discountFlat>0){subtotal=_currencyRound(Math.max(0,subtotal-_discountFlat));}
   else{
     const hh=getActiveHappyHour();
-    if(hh&&hh.discountPct>0){discountFactor=1-hh.discountPct/100;hhDiscount=_currencyRound(subtotal*(hh.discountPct/100));subtotal=_currencyRound(subtotal-hhDiscount);}
+    if(hh&&hh.discountPct>0){hhDiscount=_currencyRound(subtotal*(hh.discountPct/100));subtotal=_currencyRound(subtotal-hhDiscount);}
   }
-  const tax=_calcItemizedTax(currentOrder,discountFactor);
+  const tax=_currencyRound(subtotal*(settings.taxRate/100));
   const tip=_currencyRound(subtotal*(tipPct/100));
   return{subtotal,tax,tip,total:_currencyRound(subtotal+tax+tip),hhDiscount};
 }
@@ -3801,17 +3436,14 @@ function openSplitModal(){
   showModal('splitModal');
 }
 
-let _itemCheckAssign={}, _itemSplitChecks=2;
 function renderSplitConfig(){
   if(_splitMode==='seat'){renderSeatConfig();return;}
-  if(_splitMode==='item'){renderItemSplitConfig();return;}
   const t=getSplitTotal();
   document.getElementById('splitBody').innerHTML=`
     <!-- Mode toggle -->
     <div style="display:flex;gap:6px;margin-bottom:12px;">
-      <button class="btn btn-sm ${_splitMode==='equal'?'btn-purple':'btn-ghost'}" style="flex:1;font-size:.8rem;" onclick="_splitMode='equal';renderSplitConfig()">✂️ Equal</button>
-      <button class="btn btn-sm ${_splitMode==='seat'?'btn-purple':'btn-ghost'}" style="flex:1;font-size:.8rem;" onclick="_splitMode='seat';_seatAssignments={};renderSplitConfig()">💺 By Seat</button>
-      <button class="btn btn-sm ${_splitMode==='item'?'btn-purple':'btn-ghost'}" style="flex:1;font-size:.8rem;" onclick="_splitMode='item';_itemCheckAssign={};_itemSplitChecks=2;renderSplitConfig()">📋 By Item</button>
+      <button class="btn btn-sm btn-purple" style="flex:1;font-size:.8rem;" onclick="_splitMode='equal';renderSplitConfig()">✂️ Equal Split</button>
+      <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.8rem;" onclick="_splitMode='seat';_seatAssignments={};renderSplitConfig()">💺 By Seat</button>
     </div>
     <div class="section-label">Split how many ways?</div>
     <div class="split-ways">
@@ -3902,82 +3534,6 @@ function assignSeat(lineIdx,seatNum){
   renderSeatConfig();
 }
 
-function renderItemSplitConfig(){
-  const checks=_itemSplitChecks;
-  const colors=['var(--accent)','var(--green)','#a855f7','#3b82f6','#f97316','#ec4899'];
-  // Build per-check totals
-  const checkTotals={};
-  for(let c=1;c<=checks;c++)checkTotals[c]={subtotal:0,items:[]};
-  splitOrderSnapshot.forEach((item,i)=>{
-    const c=_itemCheckAssign[i];
-    if(c&&checkTotals[c]){const line=(item.comped?0:(item.price+(item.modTotal||0))*item.qty);checkTotals[c].subtotal+=line;checkTotals[c].items.push(item);}
-  });
-  const allAssigned=splitOrderSnapshot.length>0&&splitOrderSnapshot.every((_,i)=>_itemCheckAssign[i]!=null);
-  const taxRate=settings.taxRate/100;
-  const tipRate=splitTipPct/100;
-  const checkSummaries=Object.entries(checkTotals).map(([c,d])=>{
-    const st=_currencyRound(d.subtotal);
-    const tax=_currencyRound(st*taxRate);
-    const tip=_currencyRound(st*tipRate);
-    return{check:parseInt(c),subtotal:st,tax,tip,total:_currencyRound(st+tax+tip)};
-  }).filter(s=>s.subtotal>0);
-  document.getElementById('splitBody').innerHTML=`
-    <div style="display:flex;gap:6px;margin-bottom:12px;">
-      <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.8rem;" onclick="_splitMode='equal';renderSplitConfig()">✂️ Equal</button>
-      <button class="btn btn-sm btn-ghost" style="flex:1;font-size:.8rem;" onclick="_splitMode='seat';_seatAssignments={};renderSplitConfig()">💺 By Seat</button>
-      <button class="btn btn-sm btn-purple" style="flex:1;font-size:.8rem;" onclick="_splitMode='item';_itemCheckAssign={};_itemSplitChecks=2;renderSplitConfig()">📋 By Item</button>
-    </div>
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-      <span style="font-size:.8rem;color:var(--text2);">Checks:</span>
-      ${[2,3,4].map(n=>`<button class="btn btn-sm ${n===checks?'btn-accent':'btn-ghost'}" onclick="_itemSplitChecks=${n};renderItemSplitConfig()">${n}</button>`).join('')}
-    </div>
-    <div style="font-size:.78rem;color:var(--text2);margin-bottom:8px;">Tap a check number to assign each item:</div>
-    <div style="max-height:230px;overflow-y:auto;margin-bottom:10px;">
-    ${splitOrderSnapshot.map((item,i)=>{
-      const assigned=_itemCheckAssign[i];
-      return`<div style="display:flex;align-items:center;gap:8px;padding:7px 4px;border-bottom:1px solid var(--border);">
-        <div style="flex:1;font-size:.85rem;">${item.qty}× ${item.name}${item.comped?' 🎁':''}<span style="color:var(--text2);font-size:.78rem;"> $${((item.price+(item.modTotal||0))*item.qty).toFixed(2)}</span></div>
-        <div style="display:flex;gap:4px;">
-          ${Array.from({length:checks},(_,k)=>k+1).map(c=>`<button onclick="_itemCheckAssign[${i}]=${c};renderItemSplitConfig()" style="width:30px;height:30px;border-radius:50%;border:2px solid ${assigned===c?colors[c-1]:'var(--border)'};background:${assigned===c?colors[c-1]:'var(--surface2)'};color:${assigned===c?'#fff':'var(--text2)'};font-size:.8rem;font-weight:700;cursor:pointer;">${c}</button>`).join('')}
-        </div>
-      </div>`;
-    }).join('')}
-    </div>
-    ${checkSummaries.length?`<div style="display:grid;grid-template-columns:repeat(${Math.min(checks,3)},1fr);gap:8px;margin-bottom:10px;">
-      ${checkSummaries.map(s=>`<div style="background:var(--surface2);border:2px solid ${colors[s.check-1]};border-radius:8px;padding:8px;text-align:center;">
-        <div style="font-size:.72rem;font-weight:700;color:${colors[s.check-1]};">Check ${s.check}</div>
-        <div style="font-size:1.1rem;font-weight:800;">$${s.total.toFixed(2)}</div>
-        <div style="font-size:.7rem;color:var(--text2);">${s.items.length} item${s.items.length===1?'':'s'}</div>
-      </div>`).join('')}
-    </div>`:''}
-    <div style="display:flex;gap:8px;margin-top:4px;">
-      <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal('splitModal')">Cancel</button>
-      <button class="btn btn-md btn-purple" style="flex:1;" onclick="startItemSplitPayments()" ${!allAssigned?'disabled title="Assign all items first"':''}>📋 Start Charging</button>
-    </div>`;
-}
-window.startItemSplitPayments=function(){
-  // Build per-check data then charge sequentially using existing split checkout flow
-  const checks=_itemSplitChecks;
-  const taxRate=settings.taxRate/100;
-  const tipRate=splitTipPct/100;
-  const checkData=[];
-  for(let c=1;c<=checks;c++){
-    const items=splitOrderSnapshot.filter((_,i)=>_itemCheckAssign[i]===c);
-    if(!items.length)continue;
-    const subtotal=_currencyRound(items.reduce((s,i)=>s+(i.comped?0:(i.price+(i.modTotal||0))*i.qty),0));
-    const tax=_currencyRound(subtotal*taxRate);
-    const tip=_currencyRound(subtotal*tipRate);
-    checkData.push({checkNum:c,items,subtotal,tax,tip,total:_currencyRound(subtotal+tax+tip)});
-  }
-  if(!checkData.length){showToast('No items assigned','error');return;}
-  // Use existing seat-split checkout flow by mapping checks to seats
-  _seatAssignments={};
-  splitOrderSnapshot.forEach((_,i)=>{if(_itemCheckAssign[i]!=null)_seatAssignments[i]=_itemCheckAssign[i];});
-  _seatPayIdx=0;
-  _splitMode='seat'; // reuse seat payment flow
-  closeModal('splitModal');
-  _seatCheckout(0);
-};
 function getSplitTotal(){
   let subtotal=splitOrderSnapshot.reduce((s,i)=>s+(i.comped?0:(i.price+(i.modTotal||0))*i.qty),0);
   // Apply happy hour discount if active (same as getOrderTotal)
@@ -4253,47 +3809,21 @@ function updateShiftTips(){
 function voidTransaction(id){
   const tx=transactions.find(t=>t.id===id);
   if(!tx)return;
+  // FIX: workers can only void their own transactions; managers/owners can void any
   const role=currentUser?currentUser.role:'';
   if(role==='worker'&&tx.employeeId!==currentUser.id){
     showToast('Workers can only void their own transactions','error');
     if(typeof _log==='function') _log('warn','Security','Worker tried to void another employee\'s transaction','TX ID: '+id);
     return;
   }
-  // Require a reason before voiding
-  const reasons=(settings.voidReasons||['Wrong Item','Customer Complaint','Duplicate','Server Error','Other']);
-  const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-    <div style="font-size:.85rem;color:var(--text2);">TX #${String(tx.id).padStart(4,'0')} · ${tx.method||''} · $${(tx.total||0).toFixed(2)}</div>
-    <div><label class="form-label">Void Reason *</label>
-      <select class="form-input" id="voidReasonSel">
-        <option value="">— Select reason —</option>
-        ${reasons.map(r=>`<option>${r}</option>`).join('')}
-      </select>
-    </div>
-    <div><label class="form-label">Notes (optional)</label>
-      <input class="form-input" id="voidReasonNote" placeholder="Additional details…"></div>
-    <div style="display:flex;gap:8px;">
-      <button class="btn btn-md btn-danger" style="flex:1;" onclick="_confirmVoid(${id})">⚠️ Void Transaction</button>
-      <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-    </div>
-  </div>`;
-  openModal&&openModal('Void Transaction',html);
-}
-function _confirmVoid(id){
-  const reason=(document.getElementById('voidReasonSel')?.value||'').trim();
-  const note=(document.getElementById('voidReasonNote')?.value||'').trim();
-  if(!reason){showToast('Select a void reason','error');return;}
-  const tx=transactions.find(t=>t.id===id);
-  if(!tx){closeModal&&closeModal();return;}
-  tx.voided=true;
-  tx.voidedBy=currentUser?currentUser.name:'Unknown';
-  tx.voidedById=currentUser?currentUser.id:null;
-  tx.voidedAt=new Date().toISOString();
-  tx.voidReason=reason;
-  tx.voidNote=note||'';
-  saveTransactions();renderReports();
-  closeModal&&closeModal();
-  showToast('Transaction voided: '+reason,'success');
-  if(typeof _log==='function')_log('warn','Void','TX #'+id+' voided: '+reason+(note?' — '+note:''),currentUser?.name);
+  _showConfirm('Void this transaction? It will remain in history but be excluded from totals.', ()=>{
+    tx.voided=true;
+    tx.voidedBy=currentUser?currentUser.name:'Unknown';
+    tx.voidedById=currentUser?currentUser.id:null;
+    tx.voidedAt=new Date().toISOString();
+    saveTransactions();renderReports();
+    showToast('Transaction voided','success');
+  }, null, {danger:true, okLabel:'Void'});
 }
 
 // ===================== REFUND =====================
@@ -4611,14 +4141,14 @@ function renderEOD(){
   const refundTx=allToday.filter(t=>t.isRefund);
   const allTodayActive=allToday.filter(t=>!t.voided&&!t.isRefund);
   // View filter (bar / kitchen / all)
-  const viewCats=_eodView==='kitchen'?FOOD_CATS:null;
+  const viewCats=_eodView==='bar'?DRINK_CATS:_eodView==='kitchen'?FOOD_CATS:null;
   const getViewItems=tx=>(tx.items||[]).filter(i=>!viewCats||viewCats.includes(i.cat));
   const todayTx=viewCats?allTodayActive.filter(tx=>getViewItems(tx).length>0):allTodayActive;
   const itemRevenue=tx=>getViewItems(tx).reduce((s,i)=>s+(i.comped?0:i.price*(i.qty||1)),0);
   const netSales=viewCats?todayTx.reduce((s,tx)=>s+itemRevenue(tx),0):allTodayActive.reduce((s,t)=>s+(t.total||0),0)-Math.abs(refundTx.reduce((s,t)=>s+(t.total||0),0));
   const grossSales=viewCats?netSales:allTodayActive.reduce((s,t)=>s+(t.subtotal||t.total||0),0);
   const deptTips=computeDeptTips(todayTx);
-  const totalTips=_eodView==='kitchen'?deptTips.kitchen:allTodayActive.reduce((s,t)=>s+(t.tip||0)+(t.autoGrat||0),0);
+  const totalTips=_eodView==='bar'?deptTips.bar:_eodView==='kitchen'?deptTips.kitchen:allTodayActive.reduce((s,t)=>s+(t.tip||0)+(t.autoGrat||0),0);
   const totalTax=viewCats?todayTx.reduce((s,tx)=>{const full=((tx.items||[]).reduce((r,i)=>r+(i.comped?0:i.price*(i.qty||1)),0))||1;return s+(tx.tax||0)*(itemRevenue(tx)/full);},0):allTodayActive.reduce((s,t)=>s+(t.tax||0),0);
   const totalComps=todayTx.reduce((s,tx)=>s+getViewItems(tx).filter(i=>i.comped).reduce((r,i)=>r+(i.price*(i.qty||1)),0),0);
   const totalDiscounts=viewCats?0:allTodayActive.reduce((s,t)=>s+(t.discountAmt||0),0);
@@ -4643,8 +4173,8 @@ function renderEOD(){
   });
 
   const tabBtn=(v,lbl,icon)=>`<button onclick="setEodView('${v}')" style="flex:1;padding:7px 4px;border:none;border-radius:7px;cursor:pointer;font-size:.8rem;font-weight:700;background:${_eodView===v?'var(--accent)':'var(--surface2)'};color:${_eodView===v?'#000':'var(--text)'};">${icon} ${lbl}</button>`;
-  const reportTitle=_eodView==='kitchen'?'Food Report':'Full Report';
-  const tipsLabel=_eodView==='kitchen'?'Food Tips':'Total Tips';
+  const reportTitle=_eodView==='bar'?'Bar Report':_eodView==='kitchen'?'Kitchen Report':'Full Report';
+  const tipsLabel=_eodView==='bar'?'Bar Tips':_eodView==='kitchen'?'Kitchen Tips':'Total Tips';
 
   if(_eodView==='cash'){
     renderCashReconciliation(allTodayActive, refundTx);
@@ -4653,7 +4183,7 @@ function renderEOD(){
 
   document.getElementById('eodBody').innerHTML=`
     <div style="display:flex;gap:6px;margin-bottom:14px;">
-      ${tabBtn('all','All','📊')}${tabBtn('kitchen','Food','🍽️')}${tabBtn('cash','Cash','💵')}
+      ${tabBtn('all','All','📊')}${tabBtn('bar','Bar','🍺')}${tabBtn('kitchen','Kitchen','🍳')}${tabBtn('cash','Cash','💵')}
     </div>
     <div style="text-align:center;margin-bottom:14px;">
       <div style="font-size:1rem;font-weight:700;">${settings.barName} — ${reportTitle}</div>
@@ -4700,7 +4230,7 @@ function renderCashReconciliation(activeTx, refundTx){
 
   document.getElementById('eodBody').innerHTML=`
     <div style="display:flex;gap:6px;margin-bottom:14px;">
-      ${tabBtn('all','All','📊')}${tabBtn('kitchen','Food','🍽️')}${tabBtn('cash','Cash','💵')}
+      ${tabBtn('all','All','📊')}${tabBtn('bar','Bar','🍺')}${tabBtn('kitchen','Kitchen','🍳')}${tabBtn('cash','Cash','💵')}
     </div>
     <div style="font-weight:800;font-size:1rem;text-align:center;margin-bottom:14px;">💵 Cash Drawer Reconciliation</div>
 
@@ -4825,7 +4355,7 @@ function runZReport(){
 }
 
 function printEOD(){
-  const viewLabel=_eodView==='kitchen'?'Food Report':'Full Report';
+  const viewLabel=_eodView==='bar'?'Bar Report':_eodView==='kitchen'?'Kitchen Report':'Full Report';
   const bodyEl=document.getElementById('eodBody');
   const clone=bodyEl.cloneNode(true);
   const btnRow=clone.querySelector('div[style*="display:flex;gap:6px;margin-bottom:14px"]');
@@ -4923,14 +4453,11 @@ function renderCheckoutBody(){
     <div style="margin-bottom:14px;"></div>
     `:''}
     <div class="section-label">Payment Method</div>
-    <div id="checkoutCustomerRow" style="margin-bottom:12px;">${typeof _checkoutCustomer!=='undefined'&&_checkoutCustomer?`<div style="display:flex;align-items:center;gap:8px;background:rgba(34,197,94,.1);border:1px solid var(--green);border-radius:8px;padding:8px 12px;font-size:.82rem;"><span>👤 <strong>${_checkoutCustomer.name}</strong></span><span style="color:var(--text2);">${_checkoutCustomer.loyaltyPoints||0} pts</span><span style="flex:1"></span><button class="btn btn-sm btn-ghost" style="padding:2px 8px;font-size:.72rem;" onclick="checkoutClearCustomer()">✕</button></div>`:'<button class="btn btn-sm btn-ghost" style="width:100%;font-size:.78rem;" onclick="checkoutLookupCustomer()">👤 Look Up Customer / Loyalty</button>'}</div>
-    <div class="pay-methods" style="grid-template-columns:1fr 1fr 1fr 1fr;">
-      <div class="pay-method ${selectedPayMethod==='tap'?'selected':''}" onclick="selPay('tap')"><div class="pm-icon">📱</div><div class="pm-label">Tap to Pay</div><div class="pm-sub">NFC / Apple Pay</div></div>
+    <div class="pay-methods" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="pay-method ${selectedPayMethod==='tap'?'selected':''}" onclick="selPay('tap')"><div class="pm-icon">📱</div><div class="pm-label">Tap to Pay</div><div class="pm-sub">NFC / Apple / Google Pay</div></div>
       <div class="pay-method ${selectedPayMethod==='card'?'selected':''}" onclick="selPay('card')"><div class="pm-icon">💳</div><div class="pm-label">Card</div><div class="pm-sub">Chip or swipe</div></div>
       <div class="pay-method ${selectedPayMethod==='cash'?'selected':''}" onclick="selPay('cash')"><div class="pm-icon">💵</div><div class="pm-label">Cash</div><div class="pm-sub">Calculate change</div></div>
-      <div class="pay-method ${selectedPayMethod==='giftcard'?'selected':''}" onclick="selPay('giftcard')"><div class="pm-icon">🎁</div><div class="pm-label">Gift Card</div><div class="pm-sub">Balance on file</div></div>
     </div>
-    ${selectedPayMethod==='giftcard'?`<div style="margin-bottom:12px;"><input class="form-input" id="gcCodeInput" placeholder="Enter gift card code…" oninput="gcLookupLive(this.value)" style="margin-bottom:6px;"><div id="gcBalanceDisplay" style="font-size:.82rem;color:var(--text2);text-align:center;"></div></div>`:''}
     ${selectedPayMethod==='cash'?`
     <div class="section-label">Amount Given</div>
     <div style="background:var(--surface2);border-radius:12px;padding:14px;margin-bottom:10px;text-align:center;cursor:pointer;" onclick="openCashDrawer(${finalTotal})">
@@ -5328,10 +4855,6 @@ function _processPaymentInner(){
     lastPayMethod=method; lastCashTendered=cashTendered; lastChangeDue=changeDue;
     lastTxId=tx.id; lastTxTimestamp=txTimestamp; lastHelcimTxId=tx.helcimTransactionId||null; lastTicketNum=_txTicket;
     transactions.push(tx);saveTransactions();
-    // Loyalty points update + inventory decrement + station printer routing
-    try{if(typeof _updateCustomerAfterCheckout==='function')_updateCustomerAfterCheckout(subtotal||0);}catch(e){}
-    try{if(typeof _invDecrementItems==='function'&&orderItems)_invDecrementItems(orderItems);}catch(e){}
-    try{if(typeof _routeOrderToStationPrinters==='function'&&orderItems)_routeOrderToStationPrinters(orderItems,tx.tabName||'Order',_txTicket);}catch(e){}
     if(checkoutTabId){const tab=tabs.find(tb=>tb.id===checkoutTabId);if(tab){tab.status='closed';tab.closedAt=new Date().toISOString();}saveTabs();_unlockTab(checkoutTabId);}
     _hidePayLock();
     try{ window._cdSend({type:'approved', total:finalTotal}); }catch(e){}
@@ -5924,31 +5447,6 @@ function _kickCashDrawer(){
   }).catch(()=>{ _kickCashDrawerEpson(ip, proxy); });
 }
 
-// ── Kitchen/Bar Printer Routing ───────────────────────────────────────────────
-// Splits order items by category and sends ESC/POS chits to correct station.
-// Called after successful checkout and from KDS ticket creation.
-function _routeOrderToStationPrinters(items, tabName, ticketNum){
-  const barIp=(settings.printerBarIp||'').trim();
-  const kitIp=(settings.printerKitchenIp||'').trim();
-  if(!barIp&&!kitIp)return;
-  const barItems=items.filter(i=>DRINK_CATS.includes(i.cat||i.category||''));
-  const kitItems=items.filter(i=>FOOD_CATS.includes(i.cat||i.category||''));
-  const header=`${settings.barName||'Restaurant'}  |  ${tabName||'Order'}  |  Ticket ${ticketNum||'#'}\n${new Date().toLocaleTimeString()}\n${'─'.repeat(32)}\n`;
-  const _buildChit=list=>header+list.map(i=>`${i.qty}x  ${i.name}${i.selectedMods?.length?' ('+i.selectedMods.join(', ')+')':''}`).join('\n')+'\n'+'─'.repeat(32)+'\n\n\n';
-  if(barIp&&barItems.length)_sendEpsonChit(barIp,_buildChit(barItems));
-  if(kitIp&&kitItems.length)_sendEpsonChit(kitIp,_buildChit(kitItems));
-}
-function _sendEpsonChit(ip,text){
-  const proxy=(settings.helcimProxy||'').replace(/\/$/,'');
-  const base=proxy||`http://${ip}`;
-  // Build ePOS-Print XML chit
-  const escaped=text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const xml=`<?xml version="1.0" encoding="utf-8"?><epos-print xmlns="http://www.epson-pos.com/schemas/2011/03/epos-print"><text lang="en" smooth="false"/><text>${escaped}</text><cut type="feed"/></epos-print>`;
-  fetch(`${base}/cgi-bin/epos/service.cgi`,{method:'POST',headers:{'Content-Type':'text/xml; charset=utf-8','SOAPAction':'"http://www.epson-pos.com/schemas/2011/03/epos-print"'},body:xml})
-    .then(r=>{if(typeof _log==='function')_log(r.ok?'info':'warn','StationPrint',r.ok?'Chit sent OK':'Chit failed',ip);})
-    .catch(e=>{if(typeof _log==='function')_log('warn','StationPrint','Chit error: '+e.message,ip);});
-}
-// ─────────────────────────────────────────────────────────────────────────────
 function _kickCashDrawerEpson(ip, proxy){
   // Epson ePOS-Print XML endpoint (TM-T20III, TM-T88VI)
   const base = proxy || `http://${ip}`;
@@ -6008,7 +5506,7 @@ function renderReports(){
   let myTxList=isWorker?txList.filter(t=>t.employeeId===currentUser.id):txList;
 
   // View filter — 'bar' = drinks, 'kitchen' = food
-  const viewCats=_reportView==='kitchen'?FOOD_CATS:null;
+  const viewCats=_reportView==='bar'?DRINK_CATS:_reportView==='kitchen'?FOOD_CATS:null;
   // Helper: items from a tx matching the active view
   const viewItems=tx=>(tx.items||[]).filter(i=>!viewCats||viewCats.includes(i.cat));
   // For split views, only include transactions that have at least one item in the category
@@ -6030,7 +5528,7 @@ function renderReports(){
     periodLabel=f&&t2?(f===t2?new Date(f+'T12:00:00').toLocaleDateString([],{month:'short',day:'numeric',year:'numeric'}):`${new Date(f+'T12:00:00').toLocaleDateString([],{month:'short',day:'numeric'})} – ${new Date(t2+'T12:00:00').toLocaleDateString([],{month:'short',day:'numeric'})}`):'Custom Range';
   } else periodLabel='All-Time';
 
-  const viewLabel=_reportView==='kitchen'?'🍽️ Food':'';
+  const viewLabel=_reportView==='bar'?'🍺 Bar':_reportView==='kitchen'?'🍳 Kitchen':'';
   const salesLabel=viewLabel?`${viewLabel} Revenue`:`${periodLabel} Sales`;
   const txCountLabel=viewTxList.length+' transaction'+(viewTxList.length!==1?'s':'');
   const avgTx=viewTxList.length?(totalSales/viewTxList.length):0;
@@ -6187,7 +5685,7 @@ function renderEmpList(){
     return`<div class="emp-row">
       <div class="emp-row-avatar" style="background:${emp.color}22;color:${emp.color}">${emp.emoji}</div>
       <div class="emp-row-info">
-        <div class="emp-row-name">${emp.name} <span class="badge role-${emp.role}">${emp.role}</span> <span style="font-size:.65rem;background:var(--surface3);border-radius:4px;padding:1px 5px;color:var(--text2);">${emp.dept==='kitchen'?'🍳 Kitchen':emp.dept==='both'?'🍽️🍳 Both':'🍽️ Front'}</span></div>
+        <div class="emp-row-name">${emp.name} <span class="badge role-${emp.role}">${emp.role}</span> <span style="font-size:.65rem;background:var(--surface3);border-radius:4px;padding:1px 5px;color:var(--text2);">${emp.dept==='kitchen'?'🍳 Kitchen':emp.dept==='both'?'🍺🍳 Both':'🍺 Bar'}</span></div>
         <div class="emp-row-title">${emp.title} · PIN: ${'•'.repeat(emp.pin.length)}</div>
       </div>
       <div class="emp-row-actions">
@@ -6280,15 +5778,9 @@ function setMenuMgmtTab(tab){
   _menuMgmtTab=tab;
   const drinkBtn=document.getElementById('menuMgmtTabDrinks');
   const foodBtn=document.getElementById('menuMgmtTabFood');
-  const invBtn=document.getElementById('menuMgmtTabInv');
   if(drinkBtn){drinkBtn.style.background=tab==='drinks'?'var(--accent)':'var(--surface2)';drinkBtn.style.color=tab==='drinks'?'#000':'var(--text)';}
   if(foodBtn){foodBtn.style.background=tab==='food'?'var(--green)':'var(--surface2)';foodBtn.style.color=tab==='food'?'#000':'var(--text)';}
-  if(invBtn){invBtn.style.background=tab==='inventory'?'#f59e0b':'var(--surface2)';invBtn.style.color=tab==='inventory'?'#000':'var(--text)';}
-  const menuWrap=document.getElementById('menuTableWrap');
-  const invPanel=document.getElementById('menuInvPanel');
-  if(menuWrap)menuWrap.style.display=tab==='inventory'?'none':'block';
-  if(invPanel){invPanel.style.display=tab==='inventory'?'block':'none';if(tab==='inventory')renderInventoryTable&&renderInventoryTable();}
-  if(tab!=='inventory')renderMenuTable();
+  renderMenuTable();
 }
 
 // Default modifier GROUPS by category
@@ -6574,33 +6066,6 @@ function addModToEditor(){}
 function addSuggestedMod(){}
 function removeModFromEditor(){}
 
-function _previewMenuPhoto(input){
-  if(!input.files||!input.files[0])return;
-  const file=input.files[0];
-  if(file.size>2*1024*1024){showToast('Photo must be under 2MB','error');return;}
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const data=e.target.result;
-    document.getElementById('menuItemPhotoData').value=data;
-    const prev=document.getElementById('menuItemPhotoPreview');
-    if(prev){prev.innerHTML=`<img src="${data}" style="width:100%;height:100%;object-fit:cover;">`;};
-  };
-  reader.readAsDataURL(file);
-}
-function _clearMenuPhoto(){
-  document.getElementById('menuItemPhotoData').value='';
-  const prev=document.getElementById('menuItemPhotoPreview');
-  if(prev)prev.innerHTML='📷';
-  const inp=document.getElementById('menuItemPhotoFile');
-  if(inp)inp.value='';
-}
-function _setMenuPhotoPreview(src){
-  const prev=document.getElementById('menuItemPhotoPreview');
-  const hidden=document.getElementById('menuItemPhotoData');
-  if(!prev||!hidden)return;
-  if(src){prev.innerHTML=`<img src="${src}" style="width:100%;height:100%;object-fit:cover;">`;hidden.value=src;}
-  else{prev.innerHTML='📷';hidden.value='';}
-}
 function openAddItemModal(){
   document.getElementById('menuEditId').value='';
   document.getElementById('menuItemModalTitle').textContent='✏️ Add Menu Item';
@@ -6613,7 +6078,6 @@ function openAddItemModal(){
   if(document.getElementById('menuItemQuickOptions'))document.getElementById('menuItemQuickOptions').value='';
   document.getElementById('menuItem86').checked=false;
   document.getElementById('menuItem86Label').style.color='var(--text2)';
-  _setMenuPhotoPreview(null);
   _nextGroupId=1;
   const defaults=DEFAULT_MOD_GROUPS[defaultCat]||[];
   _editingModGroups=defaults.map(g=>({id:_nextGroupId++,name:g.name,mods:[...g.mods]}));
@@ -6633,7 +6097,6 @@ function openEditItemModal(id){
   const s86=document.getElementById('menuItem86');
   s86.checked=!!item.eightySixed;
   document.getElementById('menuItem86Label').style.color=s86.checked?'var(--red)':'var(--text2)';
-  _setMenuPhotoPreview(item.photo||null);
   _nextGroupId=1;
   if(item.modifierGroups&&item.modifierGroups.length){
     // Load saved groups
@@ -6664,12 +6127,11 @@ function saveMenuItem(){
   const eightySixed=document.getElementById('menuItem86').checked;
   const qoRaw=document.getElementById('menuItemQuickOptions')?document.getElementById('menuItemQuickOptions').value:'';
   const quickOptions=qoRaw.split(',').map(s=>s.trim()).filter(Boolean);
-  const photo=document.getElementById('menuItemPhotoData')?.value||'';
   if(id){
     const item=menuItems.find(i=>i.id===parseInt(id));
-    if(item){item.name=name;item.price=price;item.cat=cat;item.emoji=emoji;item.modifierGroups=modifierGroups;item.modifiers=modifiers;item.eightySixed=eightySixed;item.quickOptions=quickOptions;if(photo)item.photo=photo;else if(photo==='')delete item.photo;}
+    if(item){item.name=name;item.price=price;item.cat=cat;item.emoji=emoji;item.modifierGroups=modifierGroups;item.modifiers=modifiers;item.eightySixed=eightySixed;item.quickOptions=quickOptions;}
   } else {
-    menuItems.push({id:nextMenuId++,name,price,cat,emoji,modifierGroups,modifiers,eightySixed:false,quickOptions,photo:photo||undefined});
+    menuItems.push({id:nextMenuId++,name,price,cat,emoji,modifierGroups,modifiers,eightySixed:false,quickOptions});
   }
   // Auto-switch management tab to match saved item's category
   _menuMgmtTab=FOOD_CATS.includes(cat)?'food':'drinks';
@@ -6700,11 +6162,6 @@ function loadSettings(){
   if(document.getElementById('settingHelcimCurrency'))document.getElementById('settingHelcimCurrency').value=settings.helcimCurrency||'USD';
   if(document.getElementById('settingHelcimProxy'))document.getElementById('settingHelcimProxy').value=settings.helcimProxy||'';
   if(document.getElementById('settingPrinterIp'))document.getElementById('settingPrinterIp').value=settings.printerIp||'';
-  if(document.getElementById('settingPrinterBarIp'))document.getElementById('settingPrinterBarIp').value=settings.printerBarIp||'';
-  if(document.getElementById('settingPrinterKitchenIp'))document.getElementById('settingPrinterKitchenIp').value=settings.printerKitchenIp||'';
-  if(document.getElementById('settingTaxRateFood'))document.getElementById('settingTaxRateFood').value=settings.taxRateFood??settings.taxRate;
-  if(document.getElementById('settingTaxRateBev'))document.getElementById('settingTaxRateBev').value=settings.taxRateBeverage??settings.taxRate;
-  if(document.getElementById('settingTaxRatePkg'))document.getElementById('settingTaxRatePkg').value=settings.taxRatePackaged??0;
   _updateCdImagePreview(settings.cdImage||null);
   // Show live vs simulation status
   const statusNote=document.getElementById('helcimStatusNote');
@@ -6748,13 +6205,6 @@ function loadSettings(){
   const qrCB=document.getElementById('settingShowReceiptQR');
   const qrSlider=document.getElementById('receiptQRSlider');
   if(qrCB){qrCB.checked=!!settings.showReceiptQR;if(qrSlider)qrSlider.style.background=settings.showReceiptQR?'var(--green)':'var(--border)';}
-  // Online ordering & loyalty
-  const ouEl=document.getElementById('settingOnlineOrderUrl');
-  if(ouEl)ouEl.value=settings.onlineOrderUrl||'';
-  const ppEl=document.getElementById('settingLoyaltyPPD');
-  if(ppEl)ppEl.value=settings.loyaltyPPD||1;
-  const ltEl=document.getElementById('settingLoyaltyThreshold');
-  if(ltEl)ltEl.value=settings.loyaltyThreshold||100;
 }
 
 function testHelcimConnection(){
@@ -6864,11 +6314,6 @@ function _getCdImage(){ return settings.cdImage||null; }
 
 function savePrinterSettings(){
   settings.printerIp=(document.getElementById('settingPrinterIp')?.value||'').trim();
-  settings.printerBarIp=(document.getElementById('settingPrinterBarIp')?.value||'').trim();
-  settings.printerKitchenIp=(document.getElementById('settingPrinterKitchenIp')?.value||'').trim();
-  if(document.getElementById('settingTaxRateFood'))settings.taxRateFood=parseFloat(document.getElementById('settingTaxRateFood').value)??settings.taxRate;
-  if(document.getElementById('settingTaxRateBev'))settings.taxRateBeverage=parseFloat(document.getElementById('settingTaxRateBev').value)??settings.taxRate;
-  if(document.getElementById('settingTaxRatePkg'))settings.taxRatePackaged=parseFloat(document.getElementById('settingTaxRatePkg').value)??0;
   settings._localSavedAt=Date.now();
   _safeSettingsSave();
   if(fbDb&&_netOnline){fbDb.ref('settings').set(settings).catch(()=>{});}
@@ -7007,20 +6452,13 @@ function saveSettings(){
   if(rfEl)settings.receiptFooter=rfEl.value.trim();
   const qrCB=document.getElementById('settingShowReceiptQR');
   if(qrCB)settings.showReceiptQR=qrCB.checked;
-  // Online ordering & loyalty
-  const ouEl=document.getElementById('settingOnlineOrderUrl');
-  if(ouEl)settings.onlineOrderUrl=ouEl.value.trim();
-  const ppEl=document.getElementById('settingLoyaltyPPD');
-  if(ppEl)settings.loyaltyPPD=parseFloat(ppEl.value)||1;
-  const ltEl=document.getElementById('settingLoyaltyThreshold');
-  if(ltEl)settings.loyaltyThreshold=parseFloat(ltEl.value)||100;
   settings._localSavedAt = Date.now();
   _safeSettingsSave();
   if(fbDb){
     if(_netOnline){fbDb.ref('settings').set(settings).catch(()=>{});}
     else{_settingsPendingSync=true;}
   }
-  document.getElementById('headerBarName').textContent='🍽️ '+settings.barName;
+  document.getElementById('headerBarName').textContent='🍺 '+settings.barName;
   showToast('Settings saved','success');
 }
 
@@ -7436,7 +6874,7 @@ function setupFirebaseListeners(){
           _safeSettingsSave();
         }
       }
-      if(currentUser)document.getElementById('headerBarName').textContent='🍽️ '+settings.barName;
+      if(currentUser)document.getElementById('headerBarName').textContent='🍺 '+settings.barName;
     }
   });
 }
@@ -8030,7 +7468,7 @@ function renderHappyHourList(){
   const el=document.getElementById('happyHourList');
   if(!el)return;
   if(!settings.happyHours||settings.happyHours.length===0){
-    el.innerHTML='<div style="font-size:.78rem;color:var(--text2);text-align:center;padding:8px 0;">No special pricing windows. Click + Add Window.</div>';
+    el.innerHTML='<div style="font-size:.78rem;color:var(--text2);text-align:center;padding:8px 0;">No happy hour windows. Click + Add Window.</div>';
     return;
   }
   el.innerHTML=settings.happyHours.map((hh,i)=>{
@@ -8105,38 +7543,26 @@ function setReportView(v){
 // ===================== REPORTS PERIOD =====================
 function setReportPeriod(p){
   _reportPeriod=p;
-  ['today','week','all','custom','audit','disputes','shift','labor','giftcards','catering'].forEach(id=>{
-    // Map id → tab button id (handle camelCase)
-    const btnId='rt'+id.charAt(0).toUpperCase()+id.slice(1);
-    const el=document.getElementById(btnId);
+  ['today','week','all','custom','audit','disputes','shift'].forEach(id=>{
+    const el=document.getElementById('rt'+id.charAt(0).toUpperCase()+id.slice(1));
     if(el)el.classList.toggle('active',id===p);
   });
   const isDisputes=p==='disputes';
   const isAudit=p==='audit';
   const isShift=p==='shift';
   const isCustom=p==='custom';
-  const isLabor=p==='labor';
-  const isGC=p==='giftcards';
-  const isCatering=p==='catering';
-  const isSpecial=isDisputes||isAudit||isShift||isLabor||isGC||isCatering;
   const mainSec=document.getElementById('reportsMainSection');
   const dispSec=document.getElementById('disputesSection');
   const auditSec=document.getElementById('auditSection');
   const shiftSec=document.getElementById('shiftSection');
-  const laborSec=document.getElementById('laborSection');
-  const gcSec=document.getElementById('gcSection');
-  const cateringSec=document.getElementById('cateringSection');
   const customRow=document.getElementById('customRangeRow');
   const goalBar=document.getElementById('salesGoalBar');
-  if(mainSec)mainSec.style.display=isSpecial?'none':'';
+  if(mainSec)mainSec.style.display=(isDisputes||isAudit||isShift)?'none':'';
   if(dispSec)dispSec.style.display=isDisputes?'':'none';
   if(auditSec)auditSec.style.display=isAudit?'':'none';
   if(shiftSec)shiftSec.style.display=isShift?'':'none';
-  if(laborSec){laborSec.style.display=isLabor?'':'none';if(isLabor)renderLaborReport&&renderLaborReport(7);}
-  if(gcSec){gcSec.style.display=isGC?'':'none';if(isGC)renderGiftCardList&&renderGiftCardList();}
-  if(cateringSec){cateringSec.style.display=isCatering?'':'none';if(isCatering)renderCateringList&&renderCateringList();}
   if(customRow)customRow.style.display=isCustom?'flex':'none';
-  if(goalBar)goalBar.style.display=isSpecial?'none':'';
+  if(goalBar)goalBar.style.display=(isDisputes||isAudit||isCustom||isShift)?'none':'';
   if(isCustom){
     const today=new Date().toISOString().split('T')[0];
     const fromEl=document.getElementById('reportDateFrom');
@@ -8144,7 +7570,7 @@ function setReportPeriod(p){
     if(fromEl&&!fromEl.value)fromEl.value=today;
     if(toEl&&!toEl.value)toEl.value=today;
   }
-  if(!isSpecial)renderReports();
+  renderReports();
 }
 function applyCustomRange(){renderReports();}
 
@@ -8276,17 +7702,10 @@ function exportCSV(todayOnly){
 
 // ===================== UTILS =====================
 function showModal(id){document.getElementById(id).classList.remove('hidden');}
-function closeModal(id='dynModal'){
-  const el=document.getElementById(id);if(!el)return;
-  el.classList.add('hidden');
+function closeModal(id){
+  document.getElementById(id).classList.add('hidden');
   if(id==='menuItemModal'){const dd=document.getElementById('emojiPickerDropdown');if(dd)dd.classList.add('hidden');document.removeEventListener('click',_epClose);}
   if(id==='checkoutModal'){cancelPayCountdown();closeCustomTipDrawer();closeCashDrawer();_releaseWakeLock();if(checkoutTabId){_unlockTab(checkoutTabId);checkoutTabId=null;}}
-}
-// Generic dynamic modal — used by feature modules in block 2
-function openModal(title, html){
-  document.getElementById('dynModalTitle').textContent=title;
-  document.getElementById('dynModalBody').innerHTML=html;
-  showModal('dynModal');
 }
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.add('hidden');}));
 
@@ -9821,8 +9240,13 @@ function _autoBackup(){
   try{
     const snap={
       ts:new Date().toISOString(),
+<<<<<<<< HEAD:bar-pos-v3.html
       tabs:_safeParse('pos2_tabs',[]),
       transactions:_safeParse('pos2_transactions',[]),
+========
+      tabs:JSON.parse(localStorage.getItem('pos2_tabs')||'[]'),
+      transactions:JSON.parse(localStorage.getItem('pos2_transactions')||'[]'),
+>>>>>>>> 91541cdbd36929a582b5319530759ee6be8548ff:index.html
       employees:_safeParse('pos2_employees',[]),
     };
     // Keep last 3 rolling backups
@@ -10907,7 +10331,7 @@ setInterval(_checkStorageQuota,15*60*1000);
           <td class="cd-item-name">${i.emoji||''} ${i.name}</td>
           <td class="cd-item-price">$${((i.price+(i.modTotal||0))*i.qty).toFixed(2)}</td>
         </tr>`).join('');
-        const hhHtml = msg.hhDiscount>0 ? `<div class="cd-total-row"><span>🏷️ Special Discount</span><span style="color:var(--green)">−$${msg.hhDiscount.toFixed(2)}</span></div>` : '';
+        const hhHtml = msg.hhDiscount>0 ? `<div class="cd-total-row"><span>🍺 Happy Hour</span><span style="color:var(--green)">−$${msg.hhDiscount.toFixed(2)}</span></div>` : '';
         main.innerHTML = `<div class="cd-order-wrap">
           <div class="cd-order-title">Your Order</div>
           <table class="cd-items">${itemsHtml}</table>
@@ -10978,1286 +10402,6 @@ window.renderOrder = function(){
   }catch(e){}
 };
 // ===================== END CUSTOMER DISPLAY =====================
-
-// ===================== KITCHEN DISPLAY SYSTEM =====================
-(function initKDS(){
-  window._kdsTickets={};window._kdsFilter='active';window._kdsTimers={};
-  function _ageMs(ts){return Date.now()-(ts||Date.now());}
-  function _ageFmt(ts){const s=Math.floor(_ageMs(ts)/1000);if(s<60)return s+'s';if(s<3600)return Math.floor(s/60)+'m '+(s%60)+'s';return Math.floor(s/3600)+'h '+Math.floor((s%3600)/60)+'m';}
-  function _ageClass(ts,status){if(status==='done')return'fresh';const m=_ageMs(ts)/60000;if(m<5)return'fresh';if(m<10)return'warm';return'hot';}
-  function _startListening(){
-    if(!fbDb)return;
-    fbDb.ref('kds_tickets').orderByChild('createdAt').startAt(Date.now()-86400000).on('value',snap=>{
-      window._kdsTickets=snap.val()||{};
-      const kp=document.getElementById('kitchenPage');
-      if(kp&&kp.classList.contains('active'))renderKitchenPage();
-    });
-  }
-  function _saveTicket(key,data){
-    if(fbDb&&_netOnline){fbDb.ref('kds_tickets/'+key).update(data).catch(()=>{if(window._kdsTickets[key])Object.assign(window._kdsTickets[key],data);renderKitchenPage();});}
-    else{if(window._kdsTickets[key])Object.assign(window._kdsTickets[key],data);renderKitchenPage();}
-  }
-  function _createTicket(tabName,items,tabId){
-    const foodItems=items.filter(i=>typeof FOOD_CATS!=='undefined'?FOOD_CATS.includes(i.cat):true);
-    if(!foodItems.length)return null;
-    const key='kds_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);
-    const ticket={key,ticketNum:typeof _ticketLabel==='function'?_ticketLabel(typeof _nextTicket==='function'?_nextTicket():(_ticketNum||0)):('#'+Math.floor(Math.random()*900+100)),tabName:tabName||'Walk-in',tabId:tabId||null,items:foodItems.map(i=>({name:i.name,qty:i.qty,mods:(i.mods||[]).map(m=>m.name||m),note:i.note||'',cat:i.cat||''})),status:'new',createdAt:Date.now(),firedAt:null,doneAt:null};
-    if(fbDb&&_netOnline){fbDb.ref('kds_tickets/'+key).set(ticket).catch(()=>{window._kdsTickets[key]=ticket;renderKitchenPage();});}
-    else{window._kdsTickets[key]=ticket;renderKitchenPage();}
-    if(settings&&settings.autoPrintKitchen)_printKitchenTicket(ticket);
-    return ticket;
-  }
-  window.kdsFireTicket=function(key){_saveTicket(key,{status:'fired',firedAt:Date.now()});showToast&&showToast('🔥 Ticket fired!','info');};
-  window.kdsBumpTicket=function(key){_saveTicket(key,{status:'done',doneAt:Date.now()});showToast&&showToast('✔ Ticket done','success');};
-  window.kdsReopenTicket=function(key){_saveTicket(key,{status:'new',firedAt:null,doneAt:null});};
-  window.kdsPrintTicket=function(key){const t=window._kdsTickets[key];if(t)_printKitchenTicket(t);};
-  window.kdsClearDone=function(){const done=Object.keys(window._kdsTickets||{}).filter(k=>window._kdsTickets[k].status==='done');if(!done.length){showToast&&showToast('No done tickets','info');return;}done.forEach(k=>{if(fbDb&&_netOnline)fbDb.ref('kds_tickets/'+k).remove().catch(()=>{delete window._kdsTickets[k];});else delete window._kdsTickets[k];});renderKitchenPage();showToast&&showToast(done.length+' ticket'+(done.length!==1?'s':'')+' cleared','success');};
-  window.kdsFilter=function(f,btn){window._kdsFilter=f;document.querySelectorAll('.kds-filter').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderKitchenPage();};
-  window.kdsNewManualTicket=function(){const name=prompt('Table / name for ticket:');if(!name)return;const raw=prompt('Items — one per line (e.g. "2x Burger"):');if(!raw)return;const items=raw.split('\n').map(l=>{const m=l.trim().match(/^(\d+)[xX]\s*(.+)/);return m?{name:m[2].trim(),qty:parseInt(m[1]),mods:[],note:'',cat:'Food'}:l.trim()?{name:l.trim(),qty:1,mods:[],note:'',cat:'Food'}:null;}).filter(Boolean);if(!items.length){showToast&&showToast('No items entered','error');return;}_createTicket(name,items,null);showToast&&showToast('Ticket created','success');};
-  window.fireCurrentOrderToKitchen=function(){const tab=typeof tabs!=='undefined'?tabs.find(t=>t.id===activeTabId&&t.status==='open'):null;const tabName=tab?tab.name:(typeof currentUser!=='undefined'&&currentUser?currentUser.name+' (walk-in)':'Walk-in');const ticket=_createTicket(tabName,currentOrder,activeTabId);if(!ticket){showToast&&showToast('No food items in order','warn');return;}showToast&&showToast('🍳 Fired: '+ticket.ticketNum,'success');};
-  window.printCurrentKitchenTicket=function(){const food=(currentOrder||[]).filter(i=>typeof FOOD_CATS!=='undefined'?FOOD_CATS.includes(i.cat):true);if(!food.length){showToast&&showToast('No food items to print','warn');return;}_printKitchenTicket({ticketNum:'#---',tabName:typeof tabs!=='undefined'&&tabs.find(t=>t.id===activeTabId)?tabs.find(t=>t.id===activeTabId).name:'Walk-in',items:food.map(i=>({name:i.name,qty:i.qty,mods:(i.mods||[]).map(m=>m.name||m),note:i.note||''})),createdAt:Date.now()});};
-  function _updateFireRow(){const row=document.getElementById('fireKitchenRow');if(!row)return;const hasFood=(currentOrder||[]).some(i=>typeof FOOD_CATS!=='undefined'?FOOD_CATS.includes(i.cat):false);row.style.display=hasFood?'':'none';}
-  (function(){function _hook(){if(typeof renderOrder==='function'){const _o=renderOrder;window.renderOrder=function(){_o.apply(this,arguments);try{_updateFireRow();}catch(e){};};}else setTimeout(_hook,500);}  _hook();})();
-  window.renderKitchenPage=function(){
-    Object.values(window._kdsTimers||{}).forEach(t=>clearInterval(t));window._kdsTimers={};
-    const tickets=window._kdsTickets||{};const filter=window._kdsFilter||'active';
-    const all=Object.entries(tickets).sort((a,b)=>(a[1].createdAt||0)-(b[1].createdAt||0));
-    const visible=all.filter(([,t])=>filter==='active'?(t.status==='new'||t.status==='fired'):filter==='all'?true:t.status===filter);
-    const statsEl=document.getElementById('kdsStatsBar');
-    if(statsEl){const nN=all.filter(([,t])=>t.status==='new').length,nF=all.filter(([,t])=>t.status==='fired').length,nD=all.filter(([,t])=>t.status==='done').length;statsEl.innerHTML=`<div class="kds-stat" style="${nN?'border-color:var(--accent);':''}">🆕 <span style="color:var(--accent)">${nN}</span> New</div><div class="kds-stat" style="${nF?'border-color:var(--orange,#f59e0b);':''}">🔥 <span style="color:var(--orange,#f59e0b)">${nF}</span> Fired</div><div class="kds-stat">✔ ${nD} Done</div>`;}
-    const grid=document.getElementById('kdsTicketGrid');if(!grid)return;
-    if(!visible.length){grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text2);">${filter==='active'?'🍳 No active tickets. Fire items from POS to get cooking.':'No '+filter+' tickets.'}</div>`;return;}
-    grid.innerHTML=visible.map(([key,t])=>{
-      const ac=_ageClass(t.createdAt,t.status),ageId='kds-age-'+key;
-      const itemsHtml=(t.items||[]).map(i=>`<div class="kds-item-row"><span class="kds-item-qty">${i.qty}×</span><span class="kds-item-name">${i.name}${i.mods&&i.mods.length?`<span class="kds-item-mods">${i.mods.join(', ')}</span>`:''}${i.note?`<span class="kds-item-note">📝 ${i.note}</span>`:''}</span></div>`).join('');
-      const actions=t.status==='new'?`<button class="btn btn-sm" style="background:var(--orange,#f59e0b);color:#000;font-weight:700;flex:1;" onclick="kdsFireTicket('${key}')">🔥 Fire</button><button class="btn btn-sm btn-ghost" style="flex:1;" onclick="kdsPrintTicket('${key}')">🖨 Print</button>`:t.status==='fired'?`<button class="btn btn-sm btn-green" style="flex:1;font-weight:700;" onclick="kdsBumpTicket('${key}')">✔ Bump Done</button><button class="btn btn-sm btn-ghost" style="flex:1;" onclick="kdsPrintTicket('${key}')">🖨 Print</button>`:`<button class="btn btn-sm btn-ghost" style="flex:1;font-size:.75rem;" onclick="kdsReopenTicket('${key}')">↩ Reopen</button><button class="btn btn-sm btn-ghost" style="flex:1;font-size:.75rem;" onclick="kdsPrintTicket('${key}')">🖨</button>`;
-      return `<div class="kds-ticket kds-${t.status}"><div class="kds-ticket-header"><span class="kds-ticket-num">${t.ticketNum||key.slice(-6)}</span><span class="kds-tab-name">${t.tabName||'?'}</span><span id="${ageId}" class="kds-age ${ac}">${_ageFmt(t.createdAt)}</span></div><div style="font-size:.72rem;color:var(--text2);margin-bottom:4px;">${{new:'🆕 New',fired:'🔥 Fired',done:'✔ Done'}[t.status]||t.status} · ${(t.items||[]).reduce((s,i)=>s+i.qty,0)} items</div><div>${itemsHtml}</div><div class="kds-actions">${actions}</div></div>`;
-    }).join('');
-    visible.forEach(([key,t])=>{if(t.status==='done')return;const sid='kds-age-'+key;window._kdsTimers[key]=setInterval(()=>{const el=document.getElementById(sid);if(!el){clearInterval(window._kdsTimers[key]);return;}el.textContent=_ageFmt(t.createdAt);el.className='kds-age '+_ageClass(t.createdAt,t.status);},5000);});
-  };
-  function _printKitchenTicket(ticket){
-    const now=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
-    const items=(ticket.items||[]).map(i=>`<div style="display:flex;gap:6px;padding:3px 0;font-family:monospace;font-size:11pt;"><span style="font-weight:bold;min-width:20px;">${i.qty}x</span><span><strong>${i.name}</strong>${i.mods&&i.mods.length?'<br><span style="margin-left:18px;font-size:.9em;">'+i.mods.join(', ')+'</span>':''}${i.note?'<br><span style="margin-left:18px;font-style:italic;font-size:.9em;">📝 '+i.note+'</span>':''}</span></div><hr style="border:none;border-top:1px dashed #ccc;margin:2px 0;">`).join('');
-    const html=`<div style="font-family:monospace;padding:12px;max-width:320px;"><div style="text-align:center;font-size:1.1rem;font-weight:bold;border-bottom:2px solid #000;padding-bottom:6px;margin-bottom:10px;">🍳 KITCHEN<br><span style="font-size:.85rem;">${ticket.ticketNum||''}</span></div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:8px;"><span><strong>${ticket.tabName||'Walk-in'}</strong></span><span>${now}</span></div>${items}</div>`;
-    if(typeof _printInPage==='function')_printInPage(html,'Kitchen '+(ticket.ticketNum||'Ticket'));
-  }
-  function _tryInit(){if(typeof fbDb!=='undefined'){_startListening();}else setTimeout(_tryInit,800);}
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END KITCHEN DISPLAY SYSTEM =====================
-
-// ===================== DELIVERY INTEGRATION =====================
-(function initDelivery(){
-  const PLATFORMS={doordash:{name:'DoorDash',color:'#e03e2d',fee:0.30,cls:'dlv-platform-doordash'},ubereats:{name:'Uber Eats',color:'#06C167',fee:0.30,cls:'dlv-platform-ubereats'},instacart:{name:'Instacart',color:'#43B02A',fee:0.20,cls:'dlv-platform-instacart'},grubhub:{name:'Grubhub',color:'#f63440',fee:0.25,cls:'dlv-platform-grubhub'},other:{name:'Other',color:'#888',fee:0.20,cls:'dlv-platform-other'}};
-  window._dlvOrders={};window._dlvFilter='all';window._dlvTimers={};
-  function _p(id){return PLATFORMS[id]||PLATFORMS.other;}
-  function _fmtMoney(n){return'$'+(+n||0).toFixed(2);}
-  function _fmtElapsed(ts){const s=Math.floor((Date.now()-ts)/1000);if(s<60)return s+'s ago';if(s<3600)return Math.floor(s/60)+'m ago';return Math.floor(s/3600)+'h ago';}
-  function _countdown(dueTs){const s=Math.floor((dueTs-Date.now())/1000);if(s<0)return{txt:'OVERDUE',urgent:true};if(s<120)return{txt:s+'s',urgent:true};return{txt:Math.floor(s/60)+'m '+(s%60)+'s',urgent:false};}
-  function _startListening(){if(!fbDb)return;fbDb.ref('delivery_orders').on('value',snap=>{window._dlvOrders=snap.val()||{};const dp=document.getElementById('deliveryPage');if(dp&&dp.classList.contains('active'))renderDeliveryPage();});}
-  function _updateOrder(key,data){if(fbDb&&_netOnline){fbDb.ref('delivery_orders/'+key).update(data).catch(()=>{if(window._dlvOrders[key])Object.assign(window._dlvOrders[key],data);renderDeliveryPage();});}else{if(window._dlvOrders[key])Object.assign(window._dlvOrders[key],data);renderDeliveryPage();}}
-  window.dlvAccept=function(key){_updateOrder(key,{status:'accepted',acceptedAt:Date.now()});showToast&&showToast('Order accepted ✅');};
-  window.dlvReject=function(key){if(!confirm('Reject this order?'))return;_updateOrder(key,{status:'rejected',rejectedAt:Date.now()});showToast&&showToast('Order rejected');};
-  window.dlvReady=function(key){_updateOrder(key,{status:'ready',readyAt:Date.now()});showToast&&showToast('Order ready for pickup 📦');};
-  window.dlvComplete=function(key){_updateOrder(key,{status:'completed',completedAt:Date.now()});showToast&&showToast('Order completed ✔');};
-  window.deliveryFilter=function(f,btn){window._dlvFilter=f;document.querySelectorAll('.dlv-filter').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderDeliveryPage();};
-  window._dlvSimulateOrder=function(){const pids=['doordash','ubereats','grubhub'];const pid=pids[Math.floor(Math.random()*pids.length)];const items=[{name:'Burger & Fries',qty:1,price:14},{name:'Caesar Salad',qty:1,price:11},{name:'Chicken Sandwich',qty:2,price:12}].slice(0,Math.floor(Math.random()*3)+1);const subtotal=items.reduce((s,i)=>s+i.qty*i.price,0);const p=_p(pid);const tax=+(subtotal*0.0925).toFixed(2);const gross=+(subtotal+tax).toFixed(2);const fee=+(gross*p.fee).toFixed(2);const net=+(gross-fee).toFixed(2);const order={platform:pid,orderId:pid.slice(0,2).toUpperCase()+'-'+Math.floor(Math.random()*90000+10000),customerName:['Alex M.','Jordan T.','Riley K.','Casey L.'][Math.floor(Math.random()*4)],items,subtotal,tax,gross,platformFee:fee,netRevenue:net,status:'pending',createdAt:Date.now(),dueAt:Date.now()+(25+Math.floor(Math.random()*15))*60000};const key='order_'+Date.now();if(fbDb&&_netOnline){fbDb.ref('delivery_orders/'+key).set(order).catch(()=>{window._dlvOrders[key]=order;renderDeliveryPage();});}else{window._dlvOrders[key]=order;renderDeliveryPage();}showToast&&showToast('🛵 Simulated '+p.name+' order incoming!');};
-  window.renderDeliveryPage=function(){
-    Object.values(window._dlvTimers||{}).forEach(t=>clearInterval(t));window._dlvTimers={};
-    const orders=window._dlvOrders||{};const filter=window._dlvFilter||'all';
-    const all=Object.entries(orders).sort((a,b)=>(b[1].createdAt||0)-(a[1].createdAt||0));
-    const visible=filter==='all'?all:all.filter(([,o])=>o.status===filter);
-    const platBar=document.getElementById('deliveryPlatformBar');
-    if(platBar){const activePids=[...new Set(all.map(([,o])=>o.platform))];platBar.innerHTML=activePids.length?activePids.map(pid=>{const p=_p(pid);const cnt=all.filter(([,o])=>o.platform===pid&&o.status==='pending').length;return`<div style="background:var(--surface);border:1px solid ${cnt?'var(--green)':'var(--border)'};border-radius:var(--radius);padding:8px 12px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:8px;"><span class="dlv-platform-badge ${p.cls}">${p.name}</span>${cnt?`<span style="color:var(--orange,#f59e0b);">${cnt} pending</span>`:'<span style="color:var(--green);">✓ Clear</span>'}<span style="color:var(--text2);font-size:.72rem;">${(p.fee*100).toFixed(0)}% fee</span></div>`;}).join(''):'<div style="color:var(--text2);font-size:.82rem;">No delivery orders yet — use ⚡ Simulate to test.</div>';}
-    const statsRow=document.getElementById('deliveryStatsRow');
-    if(statsRow){const pending=all.filter(([,o])=>o.status==='pending').length,active=all.filter(([,o])=>['accepted','ready'].includes(o.status)).length,todayDone=all.filter(([,o])=>o.status==='completed'&&o.completedAt>Date.now()-86400000),grossT=todayDone.reduce((s,[,o])=>s+(o.gross||0),0),netT=todayDone.reduce((s,[,o])=>s+(o.netRevenue||0),0);statsRow.innerHTML=`<div class="dlv-stat-card"><div class="dlv-stat-val" style="color:var(--orange,#f59e0b);">${pending}</div><div class="dlv-stat-lbl">Pending</div></div><div class="dlv-stat-card"><div class="dlv-stat-val">${active}</div><div class="dlv-stat-lbl">In Progress</div></div><div class="dlv-stat-card"><div class="dlv-stat-val">${_fmtMoney(grossT)}</div><div class="dlv-stat-lbl">Today Gross</div></div><div class="dlv-stat-card"><div class="dlv-stat-val" style="color:var(--green);">${_fmtMoney(netT)}</div><div class="dlv-stat-lbl">Today Net</div></div>`;}
-    const list=document.getElementById('deliveryOrdersList');if(!list)return;
-    if(!visible.length){list.innerHTML=`<div style="text-align:center;padding:40px;color:var(--text2);">${filter==='all'?'🛵 No delivery orders yet.':'No '+filter+' orders.'}</div>`;return;}
-    list.innerHTML=visible.map(([key,o])=>{
-      const p=_p(o.platform),st=o.status||'pending',due=o.dueAt?_countdown(o.dueAt):null,tsId='dlv-ts-'+key;
-      const itemsHtml=(o.items||[]).map(i=>`<div style="display:flex;justify-content:space-between;font-size:.84rem;padding:3px 0;border-bottom:1px solid var(--border);"><span>${i.qty}× ${i.name}</span><span>${_fmtMoney(i.qty*i.price)}</span></div>`).join('');
-      const feeRow=o.platformFee!=null?`<div style="display:flex;justify-content:space-between;font-size:.8rem;margin-top:6px;"><span style="color:var(--text2);">${p.name} fee (${(p.fee*100).toFixed(0)}%)</span><span style="color:var(--red,#ef4444);">-${_fmtMoney(o.platformFee)}</span></div><div style="display:flex;justify-content:space-between;font-size:.85rem;font-weight:700;margin-top:4px;"><span>Net to house</span><span style="color:var(--green);">${_fmtMoney(o.netRevenue)}</span></div>`:'';
-      const actions={pending:`<button class="btn btn-sm" style="background:var(--green);color:#fff;flex:1;" onclick="dlvAccept('${key}')">✅ Accept</button><button class="btn btn-sm" style="background:var(--red,#ef4444);color:#fff;flex:1;" onclick="dlvReject('${key}')">✖ Reject</button>`,accepted:`<button class="btn btn-sm" style="background:var(--purple);color:#fff;flex:1;" onclick="dlvReady('${key}')">📦 Mark Ready</button><button class="btn btn-sm" style="background:var(--red,#ef4444);color:#fff;flex:1;" onclick="dlvReject('${key}')">✖ Reject</button>`,ready:`<button class="btn btn-sm" style="background:var(--accent);color:#fff;flex:1;" onclick="dlvComplete('${key}')">✔ Complete</button>`,completed:`<span style="color:var(--text2);font-size:.8rem;">✔ Done ${o.completedAt?_fmtElapsed(o.completedAt):''}</span>`,rejected:`<span style="color:var(--text2);font-size:.8rem;">✖ Rejected</span>`}[st]||'';
-      return`<div class="dlv-card ${st}"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;flex-wrap:wrap;"><span class="dlv-platform-badge ${p.cls}">${p.name}</span><span style="font-weight:700;">#${o.orderId||key}</span><span style="color:var(--text2);font-size:.82rem;">${o.customerName||'Customer'}</span><span style="flex:1;"></span>${due?`<span id="${tsId}" style="font-size:.75rem;font-family:monospace;font-weight:700;color:${due.urgent?'var(--orange,#f59e0b)':'var(--text2)'};">⏱ ${due.txt}</span>`:''}<span style="font-size:.75rem;color:var(--text2);">${o.createdAt?_fmtElapsed(o.createdAt):''}</span></div><div style="margin-bottom:8px;">${itemsHtml}</div><div style="display:flex;justify-content:space-between;font-size:.82rem;color:var(--text2);margin-top:6px;"><span>Subtotal: ${_fmtMoney(o.subtotal)}</span><span>Tax: ${_fmtMoney(o.tax)}</span><span style="font-weight:700;color:var(--text);">Gross: ${_fmtMoney(o.gross)}</span></div>${feeRow}<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">${actions}</div></div>`;
-    }).join('');
-    visible.forEach(([key,o])=>{if(!o.dueAt||['completed','rejected'].includes(o.status))return;const sid='dlv-ts-'+key;window._dlvTimers[key]=setInterval(()=>{const el=document.getElementById(sid);if(!el){clearInterval(window._dlvTimers[key]);return;}const cd=_countdown(o.dueAt);el.textContent='⏱ '+cd.txt;el.style.color=cd.urgent?'var(--orange,#f59e0b)':'var(--text2)';},1000);});
-  };
-  function _tryInit(){if(typeof fbDb!=='undefined'){_startListening();}else setTimeout(_tryInit,800);}
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END DELIVERY INTEGRATION =====================
-
-// ===================== TIME CLOCK =====================
-(function initTimeClock(){
-  'use strict';
-  const _node=()=>fbDb?fbDb.ref('time_clock'):null;
-  const _today=()=>new Date().toISOString().slice(0,10);
-  let _tcData={};
-
-  function _loadLocal(){
-    try{return JSON.parse(localStorage.getItem('pos2_timeclock')||'{}');}catch(e){return{};}
-  }
-  function _saveLocal(data){localStorage.setItem('pos2_timeclock',JSON.stringify(data));}
-
-  function _getDay(dateStr){
-    if(_tcData[dateStr])return _tcData[dateStr];
-    const local=_loadLocal();
-    return local[dateStr]||{};
-  }
-
-  function _setDay(dateStr,dayData){
-    _tcData[dateStr]=dayData;
-    const local=_loadLocal();
-    local[dateStr]=dayData;
-    _saveLocal(local);
-    const n=_node();
-    if(n&&_netOnline)n.child(dateStr).set(dayData).catch(()=>{});
-  }
-
-  window.tcClockIn=function(empId){
-    if(!empId){
-      // Show picker
-      const emps=(employees||[]).filter(e=>e.active!==false);
-      if(!emps.length){showToast('No active employees','error');return;}
-      const pick=prompt('Enter employee PIN or select:\n'+emps.map((e,i)=>`${i+1}. ${e.name}`).join('\n'));
-      if(!pick)return;
-      const idx=parseInt(pick)-1;
-      if(isNaN(idx)||!emps[idx]){showToast('Invalid selection','error');return;}
-      empId=emps[idx].id||emps[idx].name;
-    }
-    const today=_today();
-    const day=_getDay(today);
-    if(!day.entries)day.entries=[];
-    const open=day.entries.find(e=>e.empId===empId&&!e.out);
-    if(open){showToast('Already clocked in','error');return;}
-    day.entries.push({empId,in:Date.now()});
-    _setDay(today,day);
-    showToast('Clocked in ✅','success');
-    renderTimeClock();
-  };
-
-  window.tcClockOut=function(empId){
-    const today=_today();
-    const day=_getDay(today);
-    if(!day.entries){showToast('Not clocked in','error');return;}
-    const open=day.entries.find(e=>e.empId===empId&&!e.out);
-    if(!open){showToast('Not clocked in','error');return;}
-    open.out=Date.now();
-    open.minutes=Math.round((open.out-open.in)/60000);
-    _setDay(today,day);
-    const hrs=(open.minutes/60).toFixed(2);
-    showToast(`Clocked out — ${hrs} hrs`,'success');
-    renderTimeClock();
-  };
-
-  window.renderTimeClock=function(){
-    const el=document.getElementById('tcCurrentlyIn')||document.getElementById('tcContainer');
-    if(!el)return;
-    const today=_today();
-    const day=_getDay(today);
-    const entries=day.entries||[];
-    const emps=employees||[];
-    const empMap={};
-    emps.forEach(e=>{empMap[e.id||e.name]=e.name;});
-    const grouped={};
-    entries.forEach(e=>{
-      const n=empMap[e.empId]||e.empId;
-      if(!grouped[e.empId])grouped[e.empId]={name:n,sessions:[]};
-      grouped[e.empId].sessions.push(e);
-    });
-    if(!Object.keys(grouped).length){
-      el.innerHTML='<div style="color:var(--text2);text-align:center;padding:20px;font-size:.88rem;">No clock entries today.</div>';
-      return;
-    }
-    const now=Date.now();
-    el.innerHTML=Object.values(grouped).map(emp=>{
-      const isIn=emp.sessions.some(s=>!s.out);
-      const totalMin=emp.sessions.filter(s=>s.out).reduce((t,s)=>t+s.minutes,0);
-      const curMin=isIn?Math.round((now-emp.sessions.find(s=>!s.out).in)/60000):0;
-      const dispMin=totalMin+curMin;
-      const hrs=Math.floor(dispMin/60),mins=dispMin%60;
-      const empId=Object.keys(grouped).find(k=>grouped[k].name===emp.name&&grouped[k]===emp)||emp.sessions[0]?.empId;
-      return `<div class="tc-row">
-        <span class="tc-badge ${isIn?'in':'out'}">${isIn?'IN':'OUT'}</span>
-        <span class="tc-emp-name">${emp.name}</span>
-        <span class="tc-time">${hrs}h ${mins}m today</span>
-        ${isIn?`<button class="btn btn-sm btn-danger" style="font-size:.78rem;padding:4px 10px;" onclick="tcClockOut('${empId}')">Clock Out</button>`:
-        `<button class="btn btn-sm" style="font-size:.78rem;padding:4px 10px;background:var(--green);color:#fff;" onclick="tcClockIn('${empId}')">Clock In</button>`}
-      </div>`;
-    }).join('');
-  };
-
-  // Sync from Firebase on load
-  function _tryInit(){
-    if(typeof fbDb!=='undefined'&&fbDb){
-      fbDb.ref('time_clock').once('value').then(snap=>{
-        if(snap.val())_tcData=snap.val();
-        renderTimeClock();
-      }).catch(()=>{});
-    } else {
-      setTimeout(_tryInit,1000);
-    }
-  }
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END TIME CLOCK =====================
-
-// ===================== GIFT CARDS =====================
-(function initGiftCards(){
-  'use strict';
-  function _gcRef(code){return fbDb?fbDb.ref('gift_cards/'+code.toUpperCase()):null;}
-  function _localGC(){try{return JSON.parse(localStorage.getItem('pos2_giftcards')||'{}');}catch(e){return{};}}
-  function _saveLocal(all){localStorage.setItem('pos2_giftcards',JSON.stringify(all));}
-  function _gcGet(code,cb){
-    const ref=_gcRef(code);
-    if(ref&&_netOnline){
-      ref.once('value').then(s=>cb(s.val())).catch(()=>cb(_localGC()[code.toUpperCase()]||null));
-    } else {
-      cb(_localGC()[code.toUpperCase()]||null);
-    }
-  }
-  function _gcSet(code,data,cb){
-    const uc=code.toUpperCase();
-    const ref=_gcRef(uc);
-    const all=_localGC();
-    all[uc]=data;
-    _saveLocal(all);
-    if(ref&&_netOnline){ref.set(data).then(()=>cb&&cb()).catch(()=>cb&&cb());}
-    else if(cb)cb();
-  }
-  function _genCode(){
-    const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-    let c='';
-    for(let i=0;i<4;i++){if(i)c+='-';for(let j=0;j<4;j++)c+=chars[Math.floor(Math.random()*chars.length)];}
-    return c;
-  }
-
-  window.gcSellModal=function(){
-    const amounts=[10,25,50,100];
-    const amtBtns=amounts.map(a=>`<button class="btn btn-md btn-ghost" onclick="_gcAmtSelect(${a})" id="gcAmt${a}" style="flex:1;">${_fmtMoney?_fmtMoney(a):'$'+a}</button>`).join('');
-    const html=`<div style="display:flex;flex-direction:column;gap:14px;">
-      <div style="display:flex;gap:8px;">${amtBtns}</div>
-      <div><label style="font-size:.8rem;color:var(--text2);">Custom Amount ($)</label>
-        <input class="form-input" id="gcCustomAmt" type="number" min="1" max="500" placeholder="0.00" oninput="_gcAmtClear()"></div>
-      <div><label style="font-size:.8rem;color:var(--text2);">Recipient Name (optional)</label>
-        <input class="form-input" id="gcRecipient" placeholder="e.g. Jane Smith"></div>
-      <div><label style="font-size:.8rem;color:var(--text2);">Custom Code (leave blank to auto-generate)</label>
-        <input class="form-input" id="gcCustomCode" placeholder="AUTO" style="text-transform:uppercase;"></div>
-      <button class="btn btn-md btn-accent" onclick="_gcSellConfirm()">💳 Issue Gift Card</button>
-    </div>`;
-    openModal('Issue Gift Card',html);
-  };
-
-  window._gcAmtSelect=function(a){
-    ['10','25','50','100'].forEach(v=>{const b=document.getElementById('gcAmt'+v);if(b){b.classList.toggle('btn-accent',parseInt(v)===a);b.classList.toggle('btn-ghost',parseInt(v)!==a);}});
-    const ci=document.getElementById('gcCustomAmt');
-    if(ci)ci.value='';
-    window._gcSelectedAmt=a;
-  };
-  window._gcAmtClear=function(){
-    ['10','25','50','100'].forEach(v=>{const b=document.getElementById('gcAmt'+v);if(b){b.classList.remove('btn-accent');b.classList.add('btn-ghost');}});
-    window._gcSelectedAmt=null;
-  };
-
-  window._gcSellConfirm=function(){
-    const customAmt=parseFloat(document.getElementById('gcCustomAmt')?.value||0);
-    const amt=customAmt||(window._gcSelectedAmt||0);
-    if(!amt||amt<1){showToast('Select or enter an amount','error');return;}
-    const rawCode=(document.getElementById('gcCustomCode')?.value||'').trim().toUpperCase();
-    const code=rawCode||_genCode();
-    const recipient=(document.getElementById('gcRecipient')?.value||'').trim();
-    const card={code,balance:amt,issued:Date.now(),recipient,issuedBy:window.currentEmployee?.name||'Staff',history:[{type:'issued',amount:amt,at:Date.now()}]};
-    _gcSet(code,card,()=>{
-      closeModal&&closeModal();
-      showToast(`Gift card ${code} issued for $${amt.toFixed(2)} ✅`,'success');
-      renderGiftCardList&&renderGiftCardList();
-    });
-  };
-
-  window.gcLookupLive=function(){
-    const inp=document.getElementById('gcCodeInput');
-    const disp=document.getElementById('gcBalanceDisplay');
-    if(!inp||!disp)return;
-    const code=inp.value.trim().toUpperCase();
-    if(code.length<4){disp.textContent='';return;}
-    disp.textContent='…';
-    _gcGet(code,card=>{
-      if(!card){disp.innerHTML='<span style="color:var(--red);">Not found</span>';return;}
-      if(card.balance<=0){disp.innerHTML='<span style="color:var(--red);">$0.00 — depleted</span>';return;}
-      disp.innerHTML=`<span style="color:var(--green);font-weight:700;">Balance: ${_fmtMoney?_fmtMoney(card.balance):'$'+card.balance.toFixed(2)}</span>`;
-      window._gcCurrentCard=card;
-    });
-  };
-
-  window.gcApplyToOrder=function(){
-    const card=window._gcCurrentCard;
-    if(!card||card.balance<=0){showToast('No valid gift card loaded','error');return;}
-    const code=card.code;
-    const due=window.checkoutTotal||0;
-    const apply=Math.min(card.balance,due);
-    if(!window._checkoutGcApplied)window._checkoutGcApplied=[];
-    window._checkoutGcApplied.push({code,applied:apply});
-    card.balance=+(card.balance-apply).toFixed(2);
-    card.history=card.history||[];
-    card.history.push({type:'redeemed',amount:apply,at:Date.now(),by:window.currentEmployee?.name||'Staff'});
-    _gcSet(code,card,()=>{});
-    showToast(`Gift card applied: ${_fmtMoney?_fmtMoney(apply):'$'+apply.toFixed(2)}`,'success');
-    const disp=document.getElementById('gcBalanceDisplay');
-    if(disp)disp.innerHTML=`<span style="color:var(--accent);">Applied: ${_fmtMoney?_fmtMoney(apply):'$'+apply.toFixed(2)} — Remaining: ${_fmtMoney?_fmtMoney(card.balance):'$'+card.balance.toFixed(2)}</span>`;
-    window._gcCurrentCard=null;
-  };
-
-  window.renderGiftCardList=function(){
-    const el=document.getElementById('gcListContainer');
-    if(!el)return;
-    const all=_localGC();
-    const cards=Object.values(all).sort((a,b)=>(b.issued||0)-(a.issued||0));
-    if(!cards.length){el.innerHTML='<div style="color:var(--text2);text-align:center;padding:20px;font-size:.88rem;">No gift cards issued yet.</div>';return;}
-    el.innerHTML=cards.map(c=>`
-      <div class="gc-card" style="margin-bottom:10px;">
-        <div class="gc-num">${c.code}</div>
-        <div class="gc-bal">${_fmtMoney?_fmtMoney(c.balance):'$'+c.balance.toFixed(2)}</div>
-        <div class="gc-meta">${c.recipient?'For: '+c.recipient+' · ':''
-        }Issued: ${c.issued?new Date(c.issued).toLocaleDateString():'-'}</div>
-      </div>`).join('');
-  };
-})();
-// ===================== END GIFT CARDS =====================
-
-// ===================== CUSTOMER CRM + LOYALTY =====================
-(function initCustomers(){
-  'use strict';
-  window._checkoutCustomer=null;
-  const _custRef=phone=>fbDb?fbDb.ref('customers/'+phone.replace(/\D/g,'')):null;
-  function _allRef(){return fbDb?fbDb.ref('customers'):null;}
-  function _localCusts(){try{return JSON.parse(localStorage.getItem('pos2_customers')||'{}');}catch(e){return{};}}
-  function _saveLocal(all){localStorage.setItem('pos2_customers',JSON.stringify(all));}
-  function _custSet(phone,data,cb){
-    const key=phone.replace(/\D/g,'');
-    const all=_localCusts();
-    all[key]=data;
-    _saveLocal(all);
-    const ref=_custRef(phone);
-    if(ref&&_netOnline){ref.set(data).then(()=>cb&&cb()).catch(()=>cb&&cb());}
-    else if(cb)cb();
-  }
-  function _custGet(phone,cb){
-    const key=phone.replace(/\D/g,'');
-    const ref=_custRef(phone);
-    if(ref&&_netOnline){
-      ref.once('value').then(s=>{const v=s.val();if(v){const all=_localCusts();all[key]=v;_saveLocal(all);}cb(v);}).catch(()=>cb(_localCusts()[key]||null));
-    } else {
-      cb(_localCusts()[key]||null);
-    }
-  }
-
-  function _fmtPhone(p){const d=p.replace(/\D/g,'');return d.length===10?`(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}`:p;}
-
-  window.checkoutLookupCustomer=function(){
-    // Called from checkout "Look Up Customer" button — show modal
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div><label class="form-label">Phone Number</label>
-        <input class="form-input" id="custLookupPhone" type="tel" placeholder="(555) 555-5555" autofocus>
-      </div>
-      <div id="custLookupResult" style="min-height:28px;font-size:.85rem;"></div>
-      <div style="display:flex;gap:8px;">
-        <button class="btn btn-md btn-accent" style="flex:1;" onclick="_custLookupConfirm()">🔍 Look Up</button>
-        <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-      </div>
-    </div>`;
-    openModal&&openModal('Customer Lookup',html);
-    setTimeout(()=>{const e=document.getElementById('custLookupPhone');if(e){e.focus();e.addEventListener('keydown',ev=>{if(ev.key==='Enter')_custLookupConfirm();});}},100);
-  };
-
-  window._custLookupConfirm=function(){
-    const phone=(document.getElementById('custLookupPhone')?.value||'').trim();
-    const resultEl=document.getElementById('custLookupResult');
-    if(!phone||phone.replace(/\D/g,'').length<7){
-      if(resultEl)resultEl.innerHTML='<span style="color:var(--red);">Enter a valid phone number</span>';
-      return;
-    }
-    if(resultEl)resultEl.innerHTML='<span style="color:var(--text2);">Looking up…</span>';
-    _custGet(phone,cust=>{
-      if(cust){
-        window._checkoutCustomer=cust;
-        const pts=cust.loyaltyPoints||0;
-        if(resultEl)resultEl.innerHTML=`<span style="color:var(--green);font-weight:700;">✅ Found: ${cust.name||_fmtPhone(phone)} — ${pts} pts</span>`;
-        setTimeout(()=>{closeModal&&closeModal();showToast&&showToast('Customer: '+(cust.name||_fmtPhone(phone)));_refreshCheckoutCustomerRow&&_refreshCheckoutCustomerRow();},600);
-      } else {
-        window._checkoutCustomer={phone,name:'',loyaltyPoints:0,visits:0,totalSpent:0,since:Date.now()};
-        if(resultEl)resultEl.innerHTML=`<span style="color:var(--accent);">New customer ✨ — will earn points after checkout</span>`;
-        setTimeout(()=>{closeModal&&closeModal();_refreshCheckoutCustomerRow&&_refreshCheckoutCustomerRow();},700);
-      }
-    });
-  };
-
-  // Re-render the checkout customer row after lookup
-  window._refreshCheckoutCustomerRow=function(){
-    const row=document.getElementById('checkoutCustomerRow');
-    if(!row)return;
-    const cust=window._checkoutCustomer;
-    if(cust&&cust.phone){
-      row.innerHTML=`<div style="display:flex;align-items:center;gap:8px;background:rgba(34,197,94,.1);border:1px solid var(--green);border-radius:8px;padding:8px 12px;font-size:.82rem;"><span>👤 <strong>${cust.name||_fmtPhone(cust.phone)}</strong></span><span style="color:var(--text2);">${cust.loyaltyPoints||0} pts</span><span style="flex:1"></span><button class="btn btn-sm btn-ghost" style="padding:2px 8px;font-size:.72rem;" onclick="checkoutClearCustomer()">✕</button></div>`;
-    } else {
-      row.innerHTML=`<button class="btn btn-sm btn-ghost" style="width:100%;font-size:.78rem;" onclick="checkoutLookupCustomer()">👤 Look Up Customer / Loyalty</button>`;
-    }
-  };
-
-  window.checkoutClearCustomer=function(){
-    window._checkoutCustomer=null;
-    _refreshCheckoutCustomerRow&&_refreshCheckoutCustomerRow();
-  };
-
-  // Called after successful checkout to update loyalty
-  window._updateCustomerAfterCheckout=function(total){
-    const cust=window._checkoutCustomer;
-    if(!cust)return;
-    const phone=cust.phone;
-    if(!phone||phone.replace(/\D/g,'').length<7)return;
-    const ppd=settings.loyaltyPPD||1;
-    const earned=Math.floor(total*ppd);
-    _custGet(phone,existing=>{
-      const updated=existing||cust;
-      updated.loyaltyPoints=(updated.loyaltyPoints||0)+earned;
-      updated.visits=(updated.visits||0)+1;
-      updated.totalSpent=+((updated.totalSpent||0)+total).toFixed(2);
-      updated.lastVisit=Date.now();
-      if(!updated.since)updated.since=Date.now();
-      if(!updated.phone)updated.phone=phone;
-      _custSet(phone,updated);
-    });
-    window._checkoutCustomer=null;
-  };
-
-  window.openAddCustomerModal=function(){
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div><label class="form-label">Name</label><input class="form-input" id="newCustName" placeholder="First Last"></div>
-      <div><label class="form-label">Phone *</label><input class="form-input" id="newCustPhone" placeholder="(555) 555-5555" type="tel"></div>
-      <div><label class="form-label">Email</label><input class="form-input" id="newCustEmail" type="email" placeholder="email@example.com"></div>
-      <div><label class="form-label">Birthday (MM/DD)</label><input class="form-input" id="newCustBday" placeholder="03/15"></div>
-      <div style="display:flex;align-items:center;gap:10px;"><label class="form-label" style="margin:0;">Marketing Opt-in</label>
-        <input type="checkbox" id="newCustOptIn" checked style="width:18px;height:18px;"></div>
-      <button class="btn btn-md btn-accent" onclick="_saveNewCustomer()">Add Customer</button>
-    </div>`;
-    openModal&&openModal('Add Customer',html);
-  };
-
-  window._saveNewCustomer=function(){
-    const name=(document.getElementById('newCustName')?.value||'').trim();
-    const phone=(document.getElementById('newCustPhone')?.value||'').trim();
-    if(!phone||phone.replace(/\D/g,'').length<7){showToast('Valid phone required','error');return;}
-    const email=(document.getElementById('newCustEmail')?.value||'').trim();
-    const bday=(document.getElementById('newCustBday')?.value||'').trim();
-    const optIn=document.getElementById('newCustOptIn')?.checked??true;
-    const cust={name,phone,email,birthday:bday,optIn,loyaltyPoints:0,visits:0,totalSpent:0,since:Date.now(),lastVisit:Date.now()};
-    _custSet(phone,cust,()=>{
-      closeModal&&closeModal();
-      showToast('Customer added ✅','success');
-      renderCustomerList&&renderCustomerList();
-    });
-  };
-
-  window.renderCustomerList=function(){
-    const el=document.getElementById('customerListContainer');
-    if(!el)return;
-    const all=_localCusts();
-    const custs=Object.values(all).sort((a,b)=>(b.lastVisit||0)-(a.lastVisit||0));
-    const search=(document.getElementById('custSearch')?.value||'').toLowerCase();
-    const filtered=search?custs.filter(c=>(c.name||'').toLowerCase().includes(search)||(c.phone||'').includes(search)):custs;
-    if(!filtered.length){
-      el.innerHTML=`<div style="text-align:center;padding:40px;color:var(--text2);">${search?'No matching customers.':'No customers yet. Add your first!'}</div>`;
-      return;
-    }
-    el.innerHTML=filtered.map(c=>{
-      const pts=c.loyaltyPoints||0;
-      const initials=(c.name||c.phone||'?').split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'?';
-      return `<div class="cust-card" onclick="openCustomerDetail('${(c.phone||'').replace(/\D/g,'')}')">
-        <div class="cust-avatar">${initials}</div>
-        <div class="cust-info">
-          <div class="cust-name">${c.name||_fmtPhone(c.phone||'')}</div>
-          <div class="cust-sub">${_fmtPhone(c.phone||'')} · ${c.visits||0} visit${c.visits===1?'':'s'} · ${_fmtMoney?_fmtMoney(c.totalSpent||0):'$'+(c.totalSpent||0).toFixed(2)} spent</div>
-        </div>
-        <div class="cust-pts">${pts} pts</div>
-      </div>`;
-    }).join('');
-  };
-
-  window.openCustomerDetail=function(phone){
-    const all=_localCusts();
-    const cust=all[phone];
-    if(!cust){showToast('Customer not found','error');return;}
-    const pts=cust.loyaltyPoints||0;
-    const threshold=settings.loyaltyThreshold||100;
-    const rewards=Math.floor(pts/threshold);
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div class="gc-card" style="text-align:center;">
-        <div style="font-size:1.8rem;font-weight:900;">${cust.name||_fmtPhone(phone)}</div>
-        <div style="font-size:1.1rem;opacity:.9;">${_fmtPhone(phone)}</div>
-        <div style="font-size:2rem;font-weight:900;margin-top:8px;">${pts} pts</div>
-        <div style="font-size:.8rem;opacity:.8;">${rewards} reward${rewards===1?'':'s'} available · ${threshold} pts = $1</div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div style="background:var(--surface);border-radius:var(--radius);padding:10px;text-align:center;">
-          <div style="font-size:1.3rem;font-weight:700;">${cust.visits||0}</div>
-          <div style="font-size:.75rem;color:var(--text2);">Visits</div>
-        </div>
-        <div style="background:var(--surface);border-radius:var(--radius);padding:10px;text-align:center;">
-          <div style="font-size:1.3rem;font-weight:700;">${_fmtMoney?_fmtMoney(cust.totalSpent||0):'$'+(cust.totalSpent||0).toFixed(2)}</div>
-          <div style="font-size:.75rem;color:var(--text2);">Total Spent</div>
-        </div>
-      </div>
-      ${cust.email?`<div style="font-size:.85rem;color:var(--text2);">📧 ${cust.email}</div>`:''}
-      ${cust.birthday?`<div style="font-size:.85rem;color:var(--text2);">🎂 Birthday: ${cust.birthday}</div>`:''}
-      <div style="font-size:.78rem;color:var(--text2);">Last visit: ${cust.lastVisit?new Date(cust.lastVisit).toLocaleDateString():'-'}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        ${rewards>0?`<button class="btn btn-sm" style="background:var(--accent);color:#fff;" onclick="_custRedeemReward('${phone}');closeModal&&closeModal();">🎁 Redeem $${rewards} Reward</button>`:''}
-        <button class="btn btn-sm btn-ghost" onclick="_editCustomer('${phone}')">✏️ Edit</button>
-        <button class="btn btn-sm btn-danger" onclick="_deleteCustomer('${phone}')">🗑 Remove</button>
-      </div>
-    </div>`;
-    openModal&&openModal('Customer Profile',html);
-  };
-
-  window._custRedeemReward=function(phone){
-    const all=_localCusts();
-    const cust=all[phone];
-    if(!cust)return;
-    const threshold=settings.loyaltyThreshold||100;
-    const rewards=Math.floor((cust.loyaltyPoints||0)/threshold);
-    if(!rewards){showToast('No rewards available','error');return;}
-    cust.loyaltyPoints=(cust.loyaltyPoints||0)-(rewards*threshold);
-    _custSet(phone,cust,()=>{showToast(`$${rewards} reward applied ✅`,'success');renderCustomerList&&renderCustomerList();});
-  };
-
-  window._editCustomer=function(phone){
-    const all=_localCusts();
-    const c=all[phone];
-    if(!c)return;
-    closeModal&&closeModal();
-    setTimeout(()=>{
-      const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-        <div><label class="form-label">Name</label><input class="form-input" id="editCustName" value="${c.name||''}"></div>
-        <div><label class="form-label">Email</label><input class="form-input" id="editCustEmail" type="email" value="${c.email||''}"></div>
-        <div><label class="form-label">Birthday (MM/DD)</label><input class="form-input" id="editCustBday" value="${c.birthday||''}"></div>
-        <div><label class="form-label">Loyalty Points</label><input class="form-input" id="editCustPts" type="number" min="0" value="${c.loyaltyPoints||0}"></div>
-        <div style="display:flex;align-items:center;gap:10px;"><label class="form-label" style="margin:0;">Marketing Opt-in</label>
-          <input type="checkbox" id="editCustOptIn" ${c.optIn?'checked':''} style="width:18px;height:18px;"></div>
-        <button class="btn btn-md btn-accent" onclick="_saveEditCustomer('${phone}')">Save Changes</button>
-      </div>`;
-      openModal&&openModal('Edit Customer',html);
-    },200);
-  };
-
-  window._saveEditCustomer=function(phone){
-    const all=_localCusts();
-    const c=all[phone];
-    if(!c)return;
-    c.name=(document.getElementById('editCustName')?.value||'').trim();
-    c.email=(document.getElementById('editCustEmail')?.value||'').trim();
-    c.birthday=(document.getElementById('editCustBday')?.value||'').trim();
-    c.loyaltyPoints=parseInt(document.getElementById('editCustPts')?.value)||0;
-    c.optIn=document.getElementById('editCustOptIn')?.checked??true;
-    _custSet(phone,c,()=>{
-      closeModal&&closeModal();
-      showToast('Customer updated','success');
-      renderCustomerList&&renderCustomerList();
-    });
-  };
-
-  window._deleteCustomer=function(phone){
-    if(!confirm('Remove this customer? This cannot be undone.'))return;
-    const all=_localCusts();
-    delete all[phone.replace(/\D/g,'')];
-    _saveLocal(all);
-    const ref=_custRef(phone);
-    if(ref&&_netOnline)ref.remove().catch(()=>{});
-    closeModal&&closeModal();
-    showToast('Customer removed','info');
-    renderCustomerList&&renderCustomerList();
-  };
-
-  // Sync from Firebase
-  function _tryInit(){
-    if(typeof fbDb!=='undefined'&&fbDb){
-      fbDb.ref('customers').once('value').then(snap=>{
-        if(snap.val()){const all=snap.val();_saveLocal(all);}
-      }).catch(()=>{});
-    } else {
-      setTimeout(_tryInit,1200);
-    }
-  }
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END CUSTOMER CRM =====================
-
-// ===================== INVENTORY TRACKING =====================
-(function initInventory(){
-  'use strict';
-  function _invRef(){return fbDb?fbDb.ref('inventory'):null;}
-  function _local(){try{return JSON.parse(localStorage.getItem('pos2_inventory')||'{}');}catch(e){return{};}}
-  function _saveLocal(d){localStorage.setItem('pos2_inventory',JSON.stringify(d));}
-  function _invSave(items,cb){
-    _saveLocal(items);
-    const ref=_invRef();
-    if(ref&&_netOnline){ref.set(items).then(()=>cb&&cb()).catch(()=>cb&&cb());}
-    else if(cb)cb();
-  }
-
-  window.renderInventoryTable=function(){
-    const el=document.getElementById('inventoryTable');
-    if(!el)return;
-    const items=_local();
-    const rows=Object.values(items).sort((a,b)=>a.name.localeCompare(b.name));
-    if(!rows.length){
-      el.innerHTML='<tr><td colspan="6" style="text-align:center;color:var(--text2);padding:24px;">No inventory items. Add items from the menu editor.</td></tr>';
-      return;
-    }
-    el.innerHTML=rows.map(it=>{
-      const qty=it.qty||0;
-      const par=it.par||0;
-      const pct=par?Math.round(qty/par*100):100;
-      const cls=qty<=0?'out':qty<=par*0.25?'low':'ok';
-      const lbl=qty<=0?'OUT':qty<=par*0.25?'LOW':'OK';
-      return `<tr>
-        <td>${it.name}</td>
-        <td>${it.category||'-'}</td>
-        <td><input class="form-input" style="width:70px;padding:4px;" type="number" min="0" value="${qty}" onchange="invUpdateQty('${it.id}',this.value)"></td>
-        <td><input class="form-input" style="width:70px;padding:4px;" type="number" min="0" value="${par}" onchange="invUpdatePar('${it.id}',this.value)"></td>
-        <td><span class="inv-stock-badge ${cls}">${lbl}</span></td>
-        <td style="font-size:.78rem;color:var(--text2);">${it.unit||'unit'}</td>
-      </tr>`;
-    }).join('');
-    // Low-stock banner
-    const low=rows.filter(it=>(it.qty||0)<=(it.par||0)*0.25);
-    const banner=document.getElementById('invLowBanner');
-    if(banner){
-      if(low.length){
-        banner.style.display='block';
-        banner.innerHTML=`⚠️ <strong>${low.length} item${low.length>1?'s':''} low/out of stock:</strong> ${low.map(i=>i.name).join(', ')}`;
-      } else {
-        banner.style.display='none';
-      }
-    }
-  };
-
-  window.invUpdateQty=function(id,val){
-    const items=_local();
-    if(items[id]){items[id].qty=parseFloat(val)||0;_invSave(items);}
-  };
-  window.invUpdatePar=function(id,val){
-    const items=_local();
-    if(items[id]){items[id].par=parseFloat(val)||0;_invSave(items);}
-  };
-  window.invAddItem=function(){
-    const name=(document.getElementById('invNewName')?.value||'').trim();
-    const cat=(document.getElementById('invNewCat')?.value||'').trim();
-    const qty=parseFloat(document.getElementById('invNewQty')?.value)||0;
-    const par=parseFloat(document.getElementById('invNewPar')?.value)||0;
-    const unit=(document.getElementById('invNewUnit')?.value||'unit').trim();
-    if(!name){showToast('Item name required','error');return;}
-    const id='inv_'+Date.now();
-    const items=_local();
-    items[id]={id,name,category:cat,qty,par,unit,added:Date.now()};
-    _invSave(items,()=>{showToast('Item added','success');renderInventoryTable&&renderInventoryTable();});
-    ['invNewName','invNewCat','invNewQty','invNewPar','invNewUnit'].forEach(k=>{const e=document.getElementById(k);if(e)e.value='';});
-  };
-
-  // Auto-decrement on checkout (if item name matches a menu item)
-  window._invDecrementItems=function(orderItems){
-    const inv=_local();
-    let changed=false;
-    orderItems.forEach(oi=>{
-      const match=Object.values(inv).find(it=>it.name.toLowerCase()===oi.name.toLowerCase());
-      if(match&&match.qty>0){match.qty=Math.max(0,match.qty-oi.qty);changed=true;}
-    });
-    if(changed)_invSave(inv);
-  };
-
-  // Sync from Firebase on load
-  function _tryInit(){
-    if(typeof fbDb!=='undefined'&&fbDb){
-      fbDb.ref('inventory').once('value').then(snap=>{
-        if(snap.val())_saveLocal(snap.val());
-        renderInventoryTable&&renderInventoryTable();
-      }).catch(()=>{});
-    } else {
-      setTimeout(_tryInit,1200);
-    }
-  }
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END INVENTORY =====================
-
-// ===================== LABOR REPORTS =====================
-(function initLaborReports(){
-  'use strict';
-  function _fmtMoney(n){return'$'+(+n||0).toFixed(2);}
-  function _getClockData(dateStr){
-    try{return(JSON.parse(localStorage.getItem('pos2_timeclock')||'{}'))[dateStr]||{};}catch(e){return{};}
-  }
-  function _dateRange(days){
-    const dates=[];
-    for(let i=days-1;i>=0;i--){
-      const d=new Date();d.setDate(d.getDate()-i);
-      dates.push(d.toISOString().slice(0,10));
-    }
-    return dates;
-  }
-
-  window.renderLaborReport=function(days){
-    days=days||7;
-    const el=document.getElementById('laborReportBody');
-    if(!el)return;
-    const dates=_dateRange(days);
-    const empMap={};
-    const emps=employees||[];
-    emps.forEach(e=>{const k=e.id||e.name;empMap[k]={name:e.name,rate:e.hourlyRate||0,totalMins:0,totalCost:0};});
-    let totalMins=0,totalCost=0;
-    dates.forEach(d=>{
-      const day=_getClockData(d);
-      const entries=day.entries||[];
-      entries.forEach(e=>{
-        const mins=e.minutes||(e.out?Math.round((e.out-e.in)/60000):0);
-        if(!mins)return;
-        if(!empMap[e.empId])empMap[e.empId]={name:e.empId,rate:0,totalMins:0,totalCost:0};
-        empMap[e.empId].totalMins+=mins;
-        const cost=(mins/60)*(empMap[e.empId].rate||0);
-        empMap[e.empId].totalCost+=cost;
-        totalMins+=mins;
-        totalCost+=cost;
-      });
-    });
-    // Sales data for labor %
-    const salesInRange=transactions?transactions.filter(t=>{
-      const ts=t.closedAt||t.timestamp||t.id;
-      const cutoff=Date.now()-days*86400000;
-      return ts>cutoff;
-    }):[];
-    const totalSales=salesInRange.reduce((s,t)=>s+(t.subtotal||t.total||0),0);
-    const laborPct=totalSales>0?(totalCost/totalSales*100).toFixed(1):'-';
-    const summaryEl=document.getElementById('laborSummary');
-    if(summaryEl){
-      const cls=totalSales>0?(totalCost/totalSales>0.35?'high':totalCost/totalSales>0.25?'warn':'ok'):'ok';
-      summaryEl.innerHTML=`
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
-          <div style="background:var(--surface);border-radius:var(--radius);padding:12px;text-align:center;">
-            <div style="font-size:1.3rem;font-weight:700;">${(totalMins/60).toFixed(1)}h</div>
-            <div style="font-size:.75rem;color:var(--text2);">Total Hours</div>
-          </div>
-          <div style="background:var(--surface);border-radius:var(--radius);padding:12px;text-align:center;">
-            <div style="font-size:1.3rem;font-weight:700;">${_fmtMoney?_fmtMoney(totalCost):'$'+totalCost.toFixed(2)}</div>
-            <div style="font-size:.75rem;color:var(--text2);">Labor Cost</div>
-          </div>
-          <div style="background:var(--surface);border-radius:var(--radius);padding:12px;text-align:center;">
-            <div style="font-size:1.3rem;font-weight:700;" class="labor-pct ${cls}">${laborPct}%</div>
-            <div style="font-size:.75rem;color:var(--text2);">Labor %</div>
-          </div>
-        </div>`;
-    }
-    const rows=Object.values(empMap).filter(e=>e.totalMins>0).sort((a,b)=>b.totalMins-a.totalMins);
-    if(!rows.length){
-      el.innerHTML='<tr><td colspan="4" style="text-align:center;color:var(--text2);padding:20px;">No clock data for this period.</td></tr>';
-      return;
-    }
-    el.innerHTML=rows.map(e=>{
-      const hrs=(e.totalMins/60).toFixed(2);
-      return `<tr>
-        <td style="font-weight:600;">${e.name}</td>
-        <td>${hrs} hrs</td>
-        <td>${e.rate?'$'+e.rate.toFixed(2)+'/hr':'-'}</td>
-        <td>${e.rate?(_fmtMoney?_fmtMoney(e.totalCost):'$'+e.totalCost.toFixed(2)):'-'}</td>
-      </tr>`;
-    }).join('');
-  };
-
-  // Range selector buttons
-  window.laborSetRange=function(days,btn){
-    document.querySelectorAll('.labor-range-btn').forEach(b=>b.classList.remove('btn-accent'));
-    if(btn)btn.classList.add('btn-accent');
-    renderLaborReport(days);
-  };
-})();
-// ===================== END LABOR REPORTS =====================
-
-// ===================== QR CODE & ONLINE ORDERING =====================
-(function initQRCode(){
-  'use strict';
-  // Lazy-load qrcode.js from CDN
-  let _qrLib=null;
-  function _loadQRLib(cb){
-    if(window.QRCode){cb(window.QRCode);return;}
-    const s=document.createElement('script');
-    s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
-    s.onload=()=>cb(window.QRCode);
-    s.onerror=()=>{
-      // Fallback: second CDN
-      const s2=document.createElement('script');
-      s2.src='https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
-      s2.onload=()=>cb(window.QRCode);
-      s2.onerror=()=>cb(null);
-      document.head.appendChild(s2);
-    };
-    document.head.appendChild(s);
-  }
-
-  window.generateMenuQR=function(){
-    const url=(settings.onlineOrderUrl||'').trim();
-    if(!url){showToast('Enter a menu/order URL in Settings first','error');return;}
-    const container=document.getElementById('menuQRCode');
-    if(!container)return;
-    container.innerHTML='<div style="color:var(--text2);font-size:.82rem;">Generating QR…</div>';
-    _loadQRLib(QRCode=>{
-      if(!QRCode){container.innerHTML='<div style="color:var(--red);">QR library failed to load. Check internet connection.</div>';return;}
-      container.innerHTML='';
-      new QRCode(container,{text:url,width:180,height:180,colorDark:'#000',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.H});
-      const label=document.createElement('div');
-      label.style.cssText='text-align:center;font-size:.75rem;color:var(--text2);margin-top:6px;word-break:break-all;';
-      label.textContent=url;
-      container.appendChild(label);
-      showToast('QR code generated ✅','success');
-    });
-  };
-
-  window.openOnlineOrderPage=function(){
-    const url=(settings.onlineOrderUrl||'').trim();
-    if(!url){showToast('Set your order URL in Settings first','error');return;}
-    window.open(url,'_blank','noopener');
-  };
-
-  window.printMenuQR=function(){
-    const url=(settings.onlineOrderUrl||'').trim();
-    if(!url){showToast('No URL set','error');return;}
-    _loadQRLib(QRCode=>{
-      if(!QRCode){showToast('QR library unavailable','error');return;}
-      const tmp=document.createElement('div');
-      tmp.id='qr_print_tmp';
-      tmp.style.display='none';
-      document.body.appendChild(tmp);
-      new QRCode(tmp,{text:url,width:300,height:300,correctLevel:QRCode.CorrectLevel.H});
-      setTimeout(()=>{
-        const canvas=tmp.querySelector('canvas');
-        const imgSrc=canvas?canvas.toDataURL('image/png'):'';
-        document.body.removeChild(tmp);
-        const name=settings.barName||'Restaurant';
-        _printInPage&&_printInPage(`<div style="font-family:Arial,sans-serif;text-align:center;padding:40px;">
-          <h2>${name}</h2>
-          <p style="color:#666;margin:8px 0 20px;">Scan to order online</p>
-          ${imgSrc?`<img src="${imgSrc}" style="width:300px;height:300px;border:1px solid #eee;border-radius:8px;">`:''}
-          <p style="color:#888;font-size:.85em;margin-top:16px;word-break:break-all;">${url}</p>
-        </div>`,'Menu QR Code');
-      },400);
-    });
-  };
-})();
-// ===================== END QR CODE =====================
-
-// ===================== CATERING / FUTURE ORDERS =====================
-(function initCatering(){
-  'use strict';
-  function _ctRef(){return fbDb?fbDb.ref('catering_orders'):null;}
-  function _local(){try{return JSON.parse(localStorage.getItem('pos2_catering')||'{}');}catch(e){return{};}}
-  function _saveLocal(d){localStorage.setItem('pos2_catering',JSON.stringify(d));}
-  function _save(orders,cb){
-    _saveLocal(orders);
-    const ref=_ctRef();
-    if(ref&&_netOnline){ref.set(orders).then(()=>cb&&cb()).catch(()=>cb&&cb());}
-    else if(cb)cb();
-  }
-
-  window.openCateringModal=function(){
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div class="form-group"><label class="form-label">Customer Name *</label><input class="form-input" id="ctName" placeholder="Jane Smith"></div>
-      <div class="form-group"><label class="form-label">Phone *</label><input class="form-input" id="ctPhone" type="tel" placeholder="(555) 555-5555"></div>
-      <div class="form-group"><label class="form-label">Event / Order Date *</label><input class="form-input" id="ctDate" type="datetime-local"></div>
-      <div class="form-group"><label class="form-label">Guest Count</label><input class="form-input" id="ctGuests" type="number" min="1" placeholder="20"></div>
-      <div class="form-group"><label class="form-label">Order Details / Notes</label><textarea class="form-input" id="ctNotes" rows="3" placeholder="Menu items, dietary restrictions, setup notes…" style="resize:vertical;"></textarea></div>
-      <div class="form-group"><label class="form-label">Deposit ($)</label><input class="form-input" id="ctDeposit" type="number" min="0" placeholder="0.00"></div>
-      <div style="display:flex;gap:10px;">
-        <button class="btn btn-md btn-accent" style="flex:1;" onclick="_saveCateringOrder()">📅 Save Order</button>
-        <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-      </div>
-    </div>`;
-    openModal&&openModal('New Catering / Future Order',html);
-    // Pre-fill date to 7 days from now
-    const d=new Date();d.setDate(d.getDate()+7);
-    const fmt=d.toISOString().slice(0,16);
-    const dtEl=document.getElementById('ctDate');
-    if(dtEl)dtEl.value=fmt;
-  };
-
-  window._saveCateringOrder=function(){
-    const name=(document.getElementById('ctName')?.value||'').trim();
-    const phone=(document.getElementById('ctPhone')?.value||'').trim();
-    const dateStr=(document.getElementById('ctDate')?.value||'').trim();
-    if(!name||!phone||!dateStr){showToast('Name, phone, and date required','error');return;}
-    const id='ct_'+Date.now();
-    const order={id,name,phone,eventDate:new Date(dateStr).getTime(),guests:parseInt(document.getElementById('ctGuests')?.value||1),notes:(document.getElementById('ctNotes')?.value||'').trim(),deposit:parseFloat(document.getElementById('ctDeposit')?.value)||0,status:'pending',created:Date.now(),createdBy:window.currentEmployee?.name||'Staff'};
-    const all=_local();
-    all[id]=order;
-    _save(all,()=>{
-      closeModal&&closeModal();
-      showToast('Catering order saved ✅','success');
-      renderCateringList&&renderCateringList();
-    });
-  };
-
-  window.renderCateringList=function(){
-    const el=document.getElementById('cateringListContainer');
-    if(!el)return;
-    const all=_local();
-    const orders=Object.values(all).sort((a,b)=>(a.eventDate||0)-(b.eventDate||0));
-    const now=Date.now();
-    const upcoming=orders.filter(o=>o.eventDate>now&&o.status!=='cancelled');
-    const past=orders.filter(o=>o.eventDate<=now||o.status==='cancelled');
-    if(!orders.length){
-      el.innerHTML='<div style="text-align:center;padding:40px;color:var(--text2);">No catering orders yet.<br><button class="btn btn-sm btn-accent" style="margin-top:12px;" onclick="openCateringModal()">+ New Order</button></div>';
-      return;
-    }
-    const renderOrder=o=>{
-      const dt=o.eventDate?new Date(o.eventDate).toLocaleString():'TBD';
-      const daysOut=o.eventDate?Math.ceil((o.eventDate-now)/86400000):null;
-      const statusCls={'pending':'pending','confirmed':'confirmed','completed':'completed','cancelled':'out'}[o.status]||'pending';
-      return `<div class="catering-card">
-        <div class="ct-header">
-          <span class="ct-name">${o.name}</span>
-          <span class="ct-date">${dt}</span>
-          ${daysOut!==null&&daysOut>0?`<span style="font-size:.75rem;color:var(--text2);">(in ${daysOut}d)</span>`:''}
-          <span class="ct-status ${statusCls}">${o.status||'pending'}</span>
-        </div>
-        <div style="font-size:.83rem;color:var(--text2);">${o.phone||''} · ${o.guests||'?'} guests</div>
-        ${o.notes?`<div style="font-size:.82rem;margin-top:6px;color:var(--text);">${o.notes}</div>`:''}
-        ${o.deposit?`<div style="font-size:.8rem;color:var(--green);margin-top:4px;">Deposit: ${_fmtMoney?_fmtMoney(o.deposit):'$'+o.deposit.toFixed(2)}</div>`:''}
-        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
-          <button class="btn btn-sm" style="background:var(--green);color:#fff;" onclick="ctSetStatus('${o.id}','confirmed')">✅ Confirm</button>
-          <button class="btn btn-sm" style="background:var(--accent);color:#fff;" onclick="ctSetStatus('${o.id}','completed')">✔ Complete</button>
-          <button class="btn btn-sm btn-ghost" onclick="ctSetStatus('${o.id}','cancelled')">✖ Cancel</button>
-        </div>
-      </div>`;
-    };
-    el.innerHTML=(upcoming.length?`<div style="font-size:.8rem;text-transform:uppercase;color:var(--text2);font-weight:700;margin-bottom:8px;">Upcoming</div>`+upcoming.map(renderOrder).join(''):'')
-      +(past.length?`<div style="font-size:.8rem;text-transform:uppercase;color:var(--text2);font-weight:700;margin:16px 0 8px;">Past</div>`+past.map(renderOrder).join(''):'');
-  };
-
-  window.ctSetStatus=function(id,status){
-    const all=_local();
-    if(all[id]){all[id].status=status;_save(all,()=>{renderCateringList&&renderCateringList();showToast('Order updated','success');});}
-  };
-
-  // Sync from Firebase on load
-  function _tryInit(){
-    if(typeof fbDb!=='undefined'&&fbDb){
-      fbDb.ref('catering_orders').once('value').then(snap=>{
-        if(snap.val())_saveLocal(snap.val());
-      }).catch(()=>{});
-    } else {
-      setTimeout(_tryInit,1200);
-    }
-  }
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END CATERING =====================
-
-// ===================== MODIFIER LOGIC UPGRADES =====================
-(function initModifierUpgrades(){
-  'use strict';
-  // Extended modifier validation: check required groups and min/max selections
-  window.validateModifiers=function(item){
-    const groups=item.modifierGroups||(item.modGroup?[{id:'default',name:item.modGroup,options:item.mods||[],required:false,min:0,max:item.mods?.length||99}]:[]);
-    for(const g of groups){
-      const selected=(item.selectedMods||[]).filter(s=>g.options&&g.options.some(o=>o.name===s.name||o===s));
-      if(g.required&&selected.length===0){
-        showToast(`Required: ${g.name}`,'error');
-        return false;
-      }
-      if(g.min&&selected.length<g.min){
-        showToast(`Select at least ${g.min} from ${g.name}`,'error');
-        return false;
-      }
-      if(g.max&&selected.length>g.max){
-        showToast(`Select at most ${g.max} from ${g.name}`,'error');
-        return false;
-      }
-    }
-    return true;
-  };
-
-  // Render a modifier group UI with radio (max=1 required) or checkbox
-  window.renderModGroup=function(group,selectedMods,onChange){
-    const {name,options=[],required=false,min=0,max=options.length}=group;
-    const isSingle=max===1;
-    const optHtml=options.map(opt=>{
-      const optName=opt.name||opt;
-      const optPrice=opt.price||0;
-      const checked=(selectedMods||[]).some(s=>(s.name||s)===optName);
-      const inp=isSingle?
-        `<input type="radio" name="mg_${name}" value="${optName}" ${checked?'checked':''} onchange="if(this.checked)_modGroupChange('${name}','${optName}',${optPrice},true)">`:
-        `<input type="checkbox" value="${optName}" ${checked?'checked':''} onchange="_modGroupChange('${name}','${optName}',${optPrice},this.checked)">`;
-      return `<label style="display:flex;align-items:center;gap:8px;padding:6px 0;cursor:pointer;">
-        ${inp}
-        <span>${optName}</span>
-        ${optPrice?`<span style="color:var(--text2);font-size:.8rem;">+${_fmtMoney?_fmtMoney(optPrice):'$'+optPrice.toFixed(2)}</span>`:''}
-      </label>`;
-    }).join('');
-    return `<div style="margin-bottom:12px;">
-      <div style="font-size:.82rem;font-weight:700;color:var(--text2);text-transform:uppercase;margin-bottom:4px;">
-        ${name}${required?' <span style="color:var(--red);">*</span>':''}
-        ${(min||max)?`<span style="font-weight:400;text-transform:none;"> (${min&&max?`${min}–${max}`:max===1?'pick one':'optional'})</span>`:''}
-      </div>
-      ${optHtml}
-    </div>`;
-  };
-})();
-// ===================== END MODIFIER UPGRADES =====================
-
-// ===================== EMPLOYEE SCHEDULING + PAYROLL EXPORT =====================
-(function initScheduling(){
-  'use strict';
-  const DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  let _schedWeekOffset=0; // 0 = this week, -1 = last week, etc.
-
-  function _weekKey(offset){
-    const d=new Date();
-    d.setDate(d.getDate()-d.getDay()+(offset||0)*7);
-    return d.toISOString().slice(0,10); // Sunday of the week
-  }
-  function _localSched(){try{return JSON.parse(localStorage.getItem('pos2_schedule')||'{}');}catch(e){return{};}}
-  function _saveSched(data){
-    localStorage.setItem('pos2_schedule',JSON.stringify(data));
-    if(typeof fbDb!=='undefined'&&fbDb&&typeof _netOnline!=='undefined'&&_netOnline){
-      fbDb.ref('schedule').set(data).catch(()=>{});
-    }
-  }
-  function _getWeekShifts(weekKey){
-    return _localSched()[weekKey]||{};
-  }
-  function _setWeekShifts(weekKey,data){
-    const all=_localSched();
-    all[weekKey]=data;
-    _saveSched(all);
-  }
-  function _minsToTime(mins){const h=Math.floor(mins/60),m=mins%60;const ampm=h<12?'AM':'PM';const hh=h===0?12:h>12?h-12:h;return`${hh}:${String(m).padStart(2,'0')} ${ampm}`;}
-  function _timeTo24(str){const [t,ap]=str.trim().split(' ');const [h,m]=t.split(':').map(Number);let hh=h;if(ap==='PM'&&h!==12)hh+=12;if(ap==='AM'&&h===12)hh=0;return`${String(hh).padStart(2,'0')}:${String(m).padStart(2,'0')}`;}
-  function _shiftHours(start,end){
-    const [sh,sm]=start.split(':').map(Number);const [eh,em]=end.split(':').map(Number);
-    let mins=(eh*60+em)-(sh*60+sm);if(mins<0)mins+=24*60;return+(mins/60).toFixed(2);
-  }
-
-  // ── Render calendar ──────────────────────────────────────────────────────────
-  window.renderScheduleCalendar=function(){
-    const weekKey=_weekKey(_schedWeekOffset);
-    const sunDate=new Date(weekKey+'T12:00:00');
-    const lbl=document.getElementById('schedWeekLabel');
-    if(lbl){const end=new Date(sunDate);end.setDate(end.getDate()+6);lbl.textContent=sunDate.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' – '+end.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
-    const cal=document.getElementById('schedCalendar');
-    if(!cal)return;
-    const shifts=_getWeekShifts(weekKey);
-    const emps=(employees||[]).filter(e=>e.active!==false);
-    if(!emps.length){cal.innerHTML='<div style="color:var(--text2);font-size:.82rem;text-align:center;padding:12px;">Add employees first</div>';return;}
-    // Calculate projected labor cost
-    let totalHrs=0,totalCost=0;
-    Object.values(shifts).forEach(dayShifts=>{
-      (dayShifts||[]).forEach(s=>{
-        const hrs=_shiftHours(s.start,s.end);totalHrs+=hrs;
-        const emp=emps.find(e=>String(e.id||e.name)===String(s.empId));
-        if(emp&&emp.hourlyRate)totalCost+=hrs*emp.hourlyRate;
-      });
-    });
-    const preview=document.getElementById('schedLaborPreview');
-    if(preview)preview.innerHTML=`Projected: <strong>${totalHrs.toFixed(1)} hrs</strong>${totalCost?` · <strong>$${totalCost.toFixed(2)}</strong> labor cost`:''}`;
-    // Build grid
-    const dayDates=DAYS.map((_,i)=>{const d=new Date(sunDate);d.setDate(d.getDate()+i);return d;});
-    const todayStr=new Date().toISOString().slice(0,10);
-    cal.innerHTML=`<table style="border-collapse:collapse;min-width:620px;width:100%;font-size:.78rem;">
-      <thead><tr><th style="padding:6px 8px;text-align:left;color:var(--text2);border-bottom:2px solid var(--border);min-width:90px;">Employee</th>
-      ${dayDates.map((d,i)=>{const ds=d.toISOString().slice(0,10);const isToday=ds===todayStr;return`<th style="padding:6px 4px;text-align:center;border-bottom:2px solid var(--border);${isToday?'color:var(--accent);font-weight:800;':''}">${DAYS[i]}<div style="font-size:.68rem;font-weight:400;">${d.getDate()}</div></th>`;}).join('')}
-      </tr></thead>
-      <tbody>${emps.map(emp=>{
-        const empId=emp.id||emp.name;
-        return`<tr><td style="padding:6px 8px;font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap;">${emp.name}</td>
-        ${DAYS.map((_,di)=>{
-          const dayKey=di.toString();
-          const dayShifts=(shifts[dayKey]||[]).filter(s=>String(s.empId)===String(empId));
-          return`<td style="padding:4px;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;vertical-align:top;">
-            ${dayShifts.map(s=>`<div style="background:rgba(245,158,11,.15);border:1px solid var(--accent);border-radius:4px;padding:2px 5px;margin:2px;cursor:pointer;font-size:.72rem;" onclick="openEditShiftModal('${weekKey}','${dayKey}','${s.id}')">
-              <div style="font-weight:700;">${s.start}–${s.end}</div>
-              <div style="color:var(--text2);">${_shiftHours(s.start,s.end)}h</div>
-            </div>`).join('')}
-            <button onclick="openAddShiftModal('${weekKey}','${di}','${empId}')" style="background:none;border:1px dashed var(--border);border-radius:4px;padding:2px 8px;font-size:.82rem;color:var(--text2);cursor:pointer;margin:2px;">+</button>
-          </td>`;
-        }).join('')}</tr>`;
-      }).join('')}</tbody>
-    </table>`;
-  };
-
-  window.schedPrevWeek=function(){_schedWeekOffset--;renderScheduleCalendar();};
-  window.schedNextWeek=function(){_schedWeekOffset++;renderScheduleCalendar();};
-
-  window.openAddShiftModal=function(weekKey,dayIdx,preEmpId){
-    const emps=(employees||[]).filter(e=>e.active!==false);
-    const wk=weekKey||_weekKey(_schedWeekOffset);
-    const di=dayIdx!=null?parseInt(dayIdx):new Date().getDay();
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div><label class="form-label">Employee *</label>
-        <select class="form-input" id="shiftEmpSel">
-          <option value="">— Select —</option>
-          ${emps.map(e=>`<option value="${e.id||e.name}" ${preEmpId===(e.id||e.name)?'selected':''}>${e.name}</option>`).join('')}
-        </select></div>
-      <div><label class="form-label">Day</label>
-        <select class="form-input" id="shiftDaySel">
-          ${DAYS.map((d,i)=>`<option value="${i}" ${i===di?'selected':''}>${d}</option>`).join('')}
-        </select></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div><label class="form-label">Start Time</label><input class="form-input" id="shiftStart" type="time" value="09:00"></div>
-        <div><label class="form-label">End Time</label><input class="form-input" id="shiftEnd" type="time" value="17:00"></div>
-      </div>
-      <div><label class="form-label">Role / Notes (optional)</label><input class="form-input" id="shiftRole" placeholder="Server, Host, Cook…"></div>
-      <div style="display:flex;gap:8px;">
-        <button class="btn btn-md btn-accent" style="flex:1;" onclick="_saveShift('${wk}')">Save Shift</button>
-        <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-      </div>
-    </div>`;
-    openModal&&openModal('Add Shift',html);
-  };
-
-  window._saveShift=function(weekKey){
-    const empId=(document.getElementById('shiftEmpSel')?.value||'').trim();
-    const day=(document.getElementById('shiftDaySel')?.value||'0');
-    const start=document.getElementById('shiftStart')?.value||'09:00';
-    const end=document.getElementById('shiftEnd')?.value||'17:00';
-    const role=(document.getElementById('shiftRole')?.value||'').trim();
-    if(!empId){showToast&&showToast('Select an employee','error');return;}
-    if(start>=end&&_shiftHours(start,end)<=0){showToast&&showToast('End time must be after start','error');return;}
-    const shifts=_getWeekShifts(weekKey);
-    if(!shifts[day])shifts[day]=[];
-    shifts[day].push({id:'s'+Date.now(),empId,start,end,role});
-    _setWeekShifts(weekKey,shifts);
-    closeModal&&closeModal();
-    renderScheduleCalendar&&renderScheduleCalendar();
-    showToast&&showToast('Shift added','success');
-  };
-
-  window.openEditShiftModal=function(weekKey,day,shiftId){
-    const shifts=_getWeekShifts(weekKey);
-    const shift=(shifts[day]||[]).find(s=>s.id===shiftId);
-    if(!shift)return;
-    const emps=(employees||[]).filter(e=>e.active!==false);
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div><label class="form-label">Employee</label>
-        <select class="form-input" id="editShiftEmp">
-          ${emps.map(e=>`<option value="${e.id||e.name}" ${shift.empId===(e.id||e.name)?'selected':''}>${e.name}</option>`).join('')}
-        </select></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div><label class="form-label">Start</label><input class="form-input" id="editShiftStart" type="time" value="${shift.start}"></div>
-        <div><label class="form-label">End</label><input class="form-input" id="editShiftEnd" type="time" value="${shift.end}"></div>
-      </div>
-      <div><label class="form-label">Role / Notes</label><input class="form-input" id="editShiftRole" value="${shift.role||''}"></div>
-      <div style="display:flex;gap:8px;">
-        <button class="btn btn-md btn-accent" style="flex:1;" onclick="_updateShift('${weekKey}','${day}','${shiftId}')">Save</button>
-        <button class="btn btn-md btn-danger" style="flex:1;" onclick="_deleteShift('${weekKey}','${day}','${shiftId}')">Delete</button>
-        <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-      </div>
-    </div>`;
-    openModal&&openModal('Edit Shift',html);
-  };
-
-  window._updateShift=function(weekKey,day,shiftId){
-    const shifts=_getWeekShifts(weekKey);
-    const shift=(shifts[day]||[]).find(s=>s.id===shiftId);
-    if(!shift)return;
-    shift.empId=document.getElementById('editShiftEmp')?.value||shift.empId;
-    shift.start=document.getElementById('editShiftStart')?.value||shift.start;
-    shift.end=document.getElementById('editShiftEnd')?.value||shift.end;
-    shift.role=(document.getElementById('editShiftRole')?.value||'').trim();
-    _setWeekShifts(weekKey,shifts);
-    closeModal&&closeModal();renderScheduleCalendar&&renderScheduleCalendar();
-    showToast&&showToast('Shift updated','success');
-  };
-
-  window._deleteShift=function(weekKey,day,shiftId){
-    const shifts=_getWeekShifts(weekKey);
-    shifts[day]=(shifts[day]||[]).filter(s=>s.id!==shiftId);
-    _setWeekShifts(weekKey,shifts);
-    closeModal&&closeModal();renderScheduleCalendar&&renderScheduleCalendar();
-    showToast&&showToast('Shift removed','info');
-  };
-
-  // ── Payroll Export ────────────────────────────────────────────────────────────
-  window.openPayrollExport=function(){
-    const today=new Date().toISOString().slice(0,10);
-    const twoWeeksAgo=new Date(Date.now()-14*86400000).toISOString().slice(0,10);
-    const html=`<div style="display:flex;flex-direction:column;gap:12px;">
-      <div style="font-size:.85rem;color:var(--text2);">Export time clock entries as CSV for ADP, Gusto, QuickBooks, or any payroll service.</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div><label class="form-label">From Date</label><input class="form-input" id="payrollFrom" type="date" value="${twoWeeksAgo}"></div>
-        <div><label class="form-label">To Date</label><input class="form-input" id="payrollTo" type="date" value="${today}"></div>
-      </div>
-      <div style="display:flex;gap:8px;">
-        <button class="btn btn-md btn-accent" style="flex:1;" onclick="_exportPayrollCSV()">⬇ Download CSV</button>
-        <button class="btn btn-md btn-ghost" style="flex:1;" onclick="closeModal&&closeModal()">Cancel</button>
-      </div>
-    </div>`;
-    openModal&&openModal('Export Payroll',html);
-  };
-
-  window._exportPayrollCSV=function(){
-    const from=document.getElementById('payrollFrom')?.value;
-    const to=document.getElementById('payrollTo')?.value;
-    if(!from||!to){showToast&&showToast('Select date range','error');return;}
-    const fromMs=new Date(from+'T00:00:00').getTime();
-    const toMs=new Date(to+'T23:59:59').getTime();
-    let allEntries=[];
-    try{
-      const clockData=JSON.parse(localStorage.getItem('pos2_timeclock')||'{}');
-      Object.entries(clockData).forEach(([dateStr,day])=>{
-        const dayMs=new Date(dateStr+'T00:00:00').getTime();
-        if(dayMs<fromMs||dayMs>toMs)return;
-        (day.entries||[]).forEach(e=>{
-          if(!e.out)return; // skip open entries
-          const emp=(employees||[]).find(em=>String(em.id||em.name)===String(e.empId));
-          const name=emp?emp.name:e.empId;
-          const rate=emp?emp.hourlyRate||0:0;
-          const hrs=+((e.out-e.in)/3600000).toFixed(4);
-          const gross=+(hrs*(rate||0)).toFixed(2);
-          allEntries.push({name,date:dateStr,clockIn:new Date(e.in).toLocaleTimeString(),clockOut:new Date(e.out).toLocaleTimeString(),hours:hrs,rate:rate||'',gross:gross||''});
-        });
-      });
-    }catch(err){}
-    if(!allEntries.length){showToast&&showToast('No clock entries in this range','info');return;}
-    const header='Employee,Date,Clock In,Clock Out,Hours,Hourly Rate,Gross Pay\n';
-    const rows=allEntries.map(r=>`"${r.name}","${r.date}","${r.clockIn}","${r.clockOut}","${r.hours}","${r.rate}","${r.gross}"`).join('\n');
-    const csv=header+rows;
-    const blob=new Blob([csv],{type:'text/csv'});
-    const url=URL.createObjectURL(blob);
-    const a=document.createElement('a');
-    a.href=url;a.download=`payroll_${from}_to_${to}.csv`;
-    document.body.appendChild(a);a.click();
-    document.body.removeChild(a);URL.revokeObjectURL(url);
-    closeModal&&closeModal();
-    showToast&&showToast(`Exported ${allEntries.length} entries`,'success');
-  };
-
-  // Hook into renderStaffPage to also render the schedule
-  const _origRenderStaffPage=window.renderStaffPage;
-  window.renderStaffPage=function(){
-    if(typeof _origRenderStaffPage==='function')_origRenderStaffPage();
-    renderScheduleCalendar();
-  };
-
-  // Sync from Firebase
-  function _tryInit(){
-    if(typeof fbDb!=='undefined'&&fbDb){
-      fbDb.ref('schedule').once('value').then(snap=>{
-        if(snap.val()){localStorage.setItem('pos2_schedule',JSON.stringify(snap.val()));}
-      }).catch(()=>{});
-    } else {
-      setTimeout(_tryInit,1200);
-    }
-  }
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',_tryInit):_tryInit();
-})();
-// ===================== END SCHEDULING + PAYROLL =====================
-
-// ===================== END SESSION GUARDS =====================
 </script>
 </body>
 </html>
